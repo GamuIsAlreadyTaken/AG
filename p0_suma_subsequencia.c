@@ -43,9 +43,9 @@ void listar_vector(int v[], int n)
     printf("[ ");
     for (int i = 0; i < n; i++)
     {
-        printf("%d, ", i);
+        printf("% d ", v[i]);
     }
-    printf(" ]\n");
+    printf("]");
 }
 
 void inicializar_semilla()
@@ -96,9 +96,9 @@ int main()
     // aleatorio(v_rand, 5);
     // printf("%d\n", sumaSubMax2(v_rand, 5));
 
+    inicializar_semilla();
     test2();
 
-    // inicializar_semilla();
     // test1();
     // test2();
     return 0;
