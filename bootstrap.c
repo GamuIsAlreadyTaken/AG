@@ -54,7 +54,7 @@ void print_table(
     int n;
     printf("$ ./p1\n");
     printf("%5s%15s\t%15s\t%15s\t%15s\n", "n", "t(n)", "t(n)/n^1.8", "t(n)/n^2", "t(n)/n^2.2");
-    for (int i = 0; i < sizeof(n); i++)
+    for (int i = 0; i < EXP_INCREMENT_STEPS; i++)
     {
         n = EXP_INCREMENT_START * pow(EXP_INCREMENT_BASE, i);
         printf("%5d%15.5lf\t%15.7lf\t%15.7lf\t%15.7lf\n",
