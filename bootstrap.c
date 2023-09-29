@@ -45,3 +45,11 @@ void print_vector_double(double v[], int n)
     }
     printf("]");
 }
+
+void print_table (int n[], double tiempos[], *funcion1, *funcion2, *funcion3){
+    printf("$ ./p1\n");
+    printf("\t\tn\t\tt(n)\t\tt(n)/n^1.8\t\tt(n)/n^2\t\tt(n)/n^2.2\n");
+    for (int i=0; i<sizeof(n); i++){
+        printf("\t\t%s\t\t%d3\t\t%d3\t\t%d3\t\t%d3", n[i], funcion1(tiempos), funcion2(tiempos), funcion3(tiempos));
+    }
+}
