@@ -1,0 +1,23 @@
+Autores: 
+	Noelia Serrano Abraldes Ð noelia.serrano
+	Victor Diez Ruiz - v.druiz
+	Ismael Miguez Valero - i.miguezv
+
+En la P1 nos piden la suma de la subsecuencia m‡xima y para realizarlo hemos desarrollado dos algoritmos, uno lineal y el otro cuadr‡tico. En los cuales aplicaremos distintos vectores aleatorios a partir de los resultados estudiaremos la complejidad computacional.
+
+Todo esto lo realizamos en una m‡quina con las siguientes caracter’sticas: 
+
+
+
+Las unidades de tiempo: 
+
+
+
+    n           t(n)	     t(n)/n^1.8	       t(n)/n^2	     t(n)/n^2.2
+  500      337.93700	      0.0046848	      0.0013517	      0.0003900
+ 1000     1319.00000	      0.0052510	      0.0013190	      0.0003313
+ 2000     5249.00000	      0.0060010	      0.0013123	      0.0002870
+ 4000    20941.00000	      0.0068753	      0.0013088	      0.0002492
+ 8000    83770.00000	      0.0078982	      0.0013089	      0.0002169
+16000   336609.00000	      0.0091140	      0.0013149	      0.0001897
+32000  1349208.00000	      0.0104908	      0.0013176	      0.0001655
