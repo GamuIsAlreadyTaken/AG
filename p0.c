@@ -1,5 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <math.h>
+
 #include "p0.h"
 #include "bootstrap.h"
 
@@ -38,6 +40,19 @@ int sumaSubMax2(int v[], int n)
     return sumaMax;
 }
 
+double cuadratico(double n)
+{
+    return n * n;
+}
+double n_to_18(double n)
+{
+    return pow(n, 1.8);
+}
+double n_to_22(double n)
+{
+    return pow(n, 2.2);
+}
+
 void time_sumaSubMax1()
 {
     int v[LAST_N];
@@ -54,7 +69,7 @@ void time_sumaSubMax1()
         times[i] = t;
     });
 
-    print_vector_double(times, EXP_INCREMENT_STEPS);
+    print_table(times, n_to_18, cuadratico, n_to_22);
 }
 
 int main()

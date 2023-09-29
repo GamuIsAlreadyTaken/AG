@@ -19,7 +19,12 @@ void rand_fill_int(int v[], int n);
 // Timing
 double get_micro_seconds();
 // Printing
-// TODO Add table print or similar
+void print_table(
+    double tiempos[],
+    double (*f1)(double),
+    double (*f2)(double),
+    double (*f3)(double));
+
 void print_vector_int(int v[], int n);
 void print_vector_double(double v[], int n);
 #pragma region Util Macros
