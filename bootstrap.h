@@ -9,9 +9,9 @@
 #define TRUSTED_TIME 500.0
 
 #define LAST_N (int)(EXP_INCREMENT_START * \
-                     pow(EXP_INCREMENT_BASE, EXP_INCREMENT_STEPS))
+                     pow(EXP_INCREMENT_BASE, EXP_INCREMENT_STEPS - 1))
 
-#define REPETITIONS_IF_UNTRUSTED_TIME 1000
+#define REPS_FOR_UNTRUSTFUL_TIME 1000
 
 // Arg init
 void init_rand_seed();
@@ -21,13 +21,11 @@ double get_micro_seconds();
 // Printing
 void print_table(
     double tiempos[],
-    double (*f1)(double),
-    double (*f2)(double),
-    double (*f3)(double));
+    char *f1_name, char *f2_name, char *f3_name,
+    double (*f1)(double), double (*f2)(double), double (*f3)(double));
 
 void print_vector_int(int v[], int n);
 void print_vector_double(double v[], int n);
-#pragma region Util Macros
 /// Toma el tiempo de lo que tenga entre los parentesis
 #define time_it$(func) ({        \
     double start, end;           \
@@ -38,23 +36,23 @@ void print_vector_double(double v[], int n);
 })
 
 /// Repite la ejecución de la función para tomar los tiempos de las funciones demasiado rapidas
-#define time_repeated$(init, func) ({                                         \
-    int i;                                                                    \
-    double start, end, t_shared, t_extra;                                     \
-    t_shared = time_it$(for (i = 0; i < REPETITIONS_IF_UNTRUSTED_TIME; i++) { \
-        init;                                                                 \
-        func;                                                                 \
-    });                                                                       \
-    t_extra = time_it$(for (i = 0; i < REPETITIONS_IF_UNTRUSTED_TIME; i++) {  \
-        init;                                                                 \
-    });                                                                       \
-    (t_shared - t_extra) / REPETITIONS_IF_UNTRUSTED_TIME;                     \
+#define time_repeated$(init, func) ({                                    \
+    int i;                                                               \
+    double t_shared, t_extra;                                            \
+    t_shared = time_it$(for (i = 0; i < REPS_FOR_UNTRUSTFUL_TIME; i++) { \
+        init;                                                            \
+        func;                                                            \
+    });                                                                  \
+    t_extra = time_it$(for (i = 0; i < REPS_FOR_UNTRUSTFUL_TIME; i++) {  \
+        init;                                                            \
+    });                                                                  \
+    (t_shared - t_extra) / REPS_FOR_UNTRUSTFUL_TIME;                     \
 })
 
 /// Llama progresivamente con un `n` exponencialmente mayor a lo que tenga entre parentesis
 /// El cuerpo tiene acceso implicitamente a:
 /// - `int i` el step en el que está
-/// - `int n` el tamaño de la `n`
+/// - `int n`
 #define exponential_increment$(body) ({       \
     int i;                                    \
     int n = EXP_INCREMENT_START;              \
@@ -64,5 +62,4 @@ void print_vector_double(double v[], int n);
         n *= EXP_INCREMENT_BASE;              \
     }                                         \
 })
-#pragma endregion Util Macros
 #endif

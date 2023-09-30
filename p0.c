@@ -40,17 +40,29 @@ int sumaSubMax2(int v[], int n)
     return sumaMax;
 }
 
+double n_to_1_8(double n)
+{
+    return pow(n, 1.8);
+}
 double cuadratico(double n)
 {
     return n * n;
 }
-double n_to_18(double n)
-{
-    return pow(n, 1.8);
-}
-double n_to_22(double n)
+double n_to_2_2(double n)
 {
     return pow(n, 2.2);
+}
+double nlogn(double n)
+{
+    return n * log(n);
+}
+double lineal(double n)
+{
+    return n;
+}
+double logn(double n)
+{
+    return log(n);
 }
 
 void time_sumaSubMax1()
@@ -69,12 +81,36 @@ void time_sumaSubMax1()
         times[i] = t;
     });
 
-    print_table(times, n_to_18, cuadratico, n_to_22);
+    print_table(times,
+                "n^1.8", "n^2", "n^2.2",
+                n_to_1_8, cuadratico, n_to_2_2);
+}
+
+void time_sumaSubMax2()
+{
+    int v[LAST_N];
+    double t;
+    double times[EXP_INCREMENT_STEPS];
+    exponential_increment$({
+        rand_fill_int(v, n);
+        t = time_it$(sumaSubMax2(v, n));
+
+        if (t < TRUSTED_TIME)
+        {
+            t = time_repeated$(rand_fill_int(v, n), sumaSubMax2(v, n));
+        }
+        times[i] = t;
+    });
+
+    print_table(times,
+                "log(n)", "n", "n*log(n)",
+                logn, lineal, nlogn);
 }
 
 int main()
 {
     init_rand_seed();
     time_sumaSubMax1();
+    time_sumaSubMax2();
     return 0;
 }
