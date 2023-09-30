@@ -26,7 +26,7 @@ void print_table(
 
 void print_vector_int(int v[], int n);
 void print_vector_double(double v[], int n);
-/// Toma el tiempo de lo que tenga entre los parentesis
+/// Toma el tiempo de lo que tenga entre los paréntesis
 #define time_it$(func) ({        \
     double start, end;           \
     start = get_micro_seconds(); \
@@ -35,7 +35,7 @@ void print_vector_double(double v[], int n);
     end - start;                 \
 })
 
-/// Repite la ejecución de la función para tomar los tiempos de las funciones demasiado rapidas
+/// Repite la ejecución de la función para tomar los tiempos de las funciones demasiado rápidas
 #define time_repeated$(init, func) ({                                    \
     int i;                                                               \
     double t_shared, t_extra;                                            \
@@ -49,8 +49,8 @@ void print_vector_double(double v[], int n);
     (t_shared - t_extra) / REPS_FOR_UNTRUSTFUL_TIME;                     \
 })
 
-/// Llama progresivamente con un `n` exponencialmente mayor a lo que tenga entre parentesis
-/// El cuerpo tiene acceso implicitamente a:
+/// Llama progresivamente con un `n` exponencialmente mayor a lo que tenga entre paréntesis
+/// El cuerpo tiene acceso implícitamente a:
 /// - `int i` el step en el que está
 /// - `int n`
 #define exponential_increment$(body) ({       \
