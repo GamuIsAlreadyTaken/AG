@@ -3,9 +3,9 @@ Autores:
 	Victor Diez Ruiz - v.druiz
 	Ismael Miguez Valero - i.miguezv
 
-En la P1 nos piden la suma de la subsecuencia maxima y para realizarlo hemos desarrollado dos algoritmos, uno lineal y el otro cuadrático. En los cuales aplicaremos distintos vectores aleatorios a partir de los resultados estudiaremos la complejidad computacional.
+Para la realizacion de la primera practica (P1) se pide la suma de la subsecuencia maxima y para realizarlo se han desarrollado dos algoritmos, uno lineal y el otro cuadrático. En los cuales se aplicarán distintos vectores aleatorios y a partir de los resultados estudiaremos la complejidad computacional.
 
-Todo esto lo realizamos en una m‡quina con las siguientes características: 
+Todo esto se realiza en tres maquinas diferentes pero los mejores resultados obtenidos se consiguienron en una maquina con las siguientes caracteristicas:
 
 MacBook Air (13-inch, 2017)
 Procesador 1,8 GHz Intel Core i5 de doble núcleo
@@ -30,14 +30,18 @@ Cotas: <n^1.8, n^2, n^2.2>
 	- Cota sobreestimada: h(n) = n ^2.2
 
 $ ./p1
-    n           t(n)	    t(n)/log(n)	         t(n)/n	  t(n)/n*log(n)
-  500        2.18800	      0.3520737	      0.0043760	      0.0007041
- 1000        3.75700	      0.5438815	      0.0037570	      0.0005439
- 2000        7.44800	      0.9798836	      0.0037240	      0.0004899
- 4000       12.62900	      1.5226579	      0.0031572	      0.0003807
- 8000       24.15800	      2.6880462	      0.0030198	      0.0003360
-16000       46.51100	      4.8046846	      0.0029069	      0.0003003
-32000       89.79800	      8.6564878	      0.0028062	      0.0002705
+     n           t(n)	    t(n)/log(n)	         t(n)/n	  t(n)/n*log(n)
+   500        1.36700	      0.2199656	      0.0027340	      0.0004399
+  1000        3.80500	      0.5508302	      0.0038050	      0.0005508
+  2000        5.08000	      0.6683417	      0.0025400	      0.0003342
+  4000       10.20100	      1.2299179	      0.0025502	      0.0003075
+  8000       18.80300	      2.0921985	      0.0023504	      0.0002615
+ 16000       40.55700	      4.1896238	      0.0025348	      0.0002619
+ 32000       71.24000	      6.8675048	      0.0022262	      0.0002146
+ 64000      144.34100	     13.0428948	      0.0022553	      0.0002038
+128000      274.84200	     23.3713446	      0.0021472	      0.0001826
+256000      512.00000	     41.1148130	      0.0020000	      0.0001606
+
 
 Cotas: <log(n), n, n*log(n)>
 	- Cota subestimada: f(n) = log(n)
@@ -46,4 +50,7 @@ Cotas: <log(n), n, n*log(n)>
 
 
 Conclusiones: 
-El tiempo necesario de cálculo del primer algoritmo es mucho mayor que en el segundo debido a la complejidad del bucle de que se realiza para su cálculo tal y como se podía intuir ya que el primero es un algoritmo cuadrático mientras que el segundo tiene una complejidad lineal. 
+Los valores de ajuste en la primera función se encuentran en torno a 0.013 mientras que en el segundo algoritmo en torno aa 0.0025.
+Tras realizar el ajuste de ambas funciones se puede deducir que el tiempo necesario de cálculo del primer algoritmo 
+es mucho mayor que en el segundo debido a la complejidad del bucle que se realiza tal y como se podía intuir ya que 
+el primero es un algoritmo cuadratico mientras que el segundo tiene una complejidad lineal. 
