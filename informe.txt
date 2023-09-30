@@ -1,14 +1,14 @@
 Autores: 
-	Noelia Serrano Abraldes Ð noelia.serrano
+	Noelia Serrano Abraldes - noelia.serrano
 	Victor Diez Ruiz - v.druiz
 	Ismael Miguez Valero - i.miguezv
 
-En la P1 nos piden la suma de la subsecuencia maxima y para realizarlo hemos desarrollado dos algoritmos, uno lineal y el otro cuadratico. En los cuales aplicaremos distintos vectores aleatorios a partir de los resultados estudiaremos la complejidad computacional.
+En la P1 nos piden la suma de la subsecuencia maxima y para realizarlo hemos desarrollado dos algoritmos, uno lineal y el otro cuadrático. En los cuales aplicaremos distintos vectores aleatorios a partir de los resultados estudiaremos la complejidad computacional.
 
-Todo esto lo realizamos en una m‡quina con las siguientes caracter’sticas: 
+Todo esto lo realizamos en una m‡quina con las siguientes características: 
 
 MacBook Air (13-inch, 2017)
-Procesador 1,8 GHz Intel Core i5 de doble nœcleo
+Procesador 1,8 GHz Intel Core i5 de doble núcleo
 Memoria 8 GB 1600 MHz DDR3
 
 Las unidades de tiempo medidas en microsegundos [µs] son las siguientes: 
@@ -26,7 +26,7 @@ $ ./p1
 
 Cotas: <n^1.8, n^2, n^2.2>
 	- Cota subestimada: f(n) = n^1.8
-	- Cota ajusutada: g(n) = n^2 
+	- Cota ajustada: g(n) = n^2 
 	- Cota sobreestimada: h(n) = n ^2.2
 
 $ ./p1
@@ -41,7 +41,7 @@ $ ./p1
 
 Cotas: <log(n), n, n*log(n)>
 	- Cota subestimada: f(n) = log(n)
-	- Cota ajusutada: g(n) = n
+	- Cota ajustada: g(n) = n
 	- Cota sobreestimada: h(n) = n*log(n)
 
 
