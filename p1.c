@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <math.h>
 
-#include "p0.h"
+#include "p1.h"
 #include "bootstrap.h"
 
 int sumaSubMax1(int v[], int n)
