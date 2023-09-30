@@ -1,17 +1,17 @@
 Autores: 
-	Noelia Serrano Abraldes – noelia.serrano
+	Noelia Serrano Abraldes √ê noelia.serrano
 	Victor Diez Ruiz - v.druiz
 	Ismael Miguez Valero - i.miguezv
 
-En la P1 nos piden la suma de la subsecuencia máxima y para realizarlo hemos desarrollado dos algoritmos, uno lineal y el otro cuadrático. En los cuales aplicaremos distintos vectores aleatorios a partir de los resultados estudiaremos la complejidad computacional.
+En la P1 nos piden la suma de la subsecuencia maxima y para realizarlo hemos desarrollado dos algoritmos, uno lineal y el otro cuadratico. En los cuales aplicaremos distintos vectores aleatorios a partir de los resultados estudiaremos la complejidad computacional.
 
-Todo esto lo realizamos en una máquina con las siguientes características: 
+Todo esto lo realizamos en una m‚Ä°quina con las siguientes caracter‚Äôsticas: 
 
 MacBook Air (13-inch, 2017)
-Procesador 1,8 GHz Intel Core i5 de doble núcleo
+Procesador 1,8 GHz Intel Core i5 de doble n≈ìcleo
 Memoria 8 GB 1600 MHz DDR3
 
-Las unidades de tiempo: 
+Las unidades de tiempo medidas en microsegundos [¬µs] son las siguientes: 
 
 
 $ ./p1
@@ -23,6 +23,12 @@ $ ./p1
  8000    84498.00000	      0.0079668	      0.0013203	      0.0002188
 16000   337273.00000	      0.0091320	      0.0013175	      0.0001901
 32000  1349742.00000	      0.0104950	      0.0013181	      0.0001655
+
+Cotas: <n^1.8, n^2, n^2.2>
+	- Cota subestimada: f(n) = n^1.8
+	- Cota ajusutada: g(n) = n^2 
+	- Cota sobreestimada: h(n) = n ^2.2
+
 $ ./p1
     n           t(n)	    t(n)/log(n)	         t(n)/n	  t(n)/n*log(n)
   500        2.18800	      0.3520737	      0.0043760	      0.0007041
@@ -32,3 +38,12 @@ $ ./p1
  8000       24.15800	      2.6880462	      0.0030198	      0.0003360
 16000       46.51100	      4.8046846	      0.0029069	      0.0003003
 32000       89.79800	      8.6564878	      0.0028062	      0.0002705
+
+Cotas: <log(n), n, n*log(n)>
+	- Cota subestimada: f(n) = log(n)
+	- Cota ajusutada: g(n) = n
+	- Cota sobreestimada: h(n) = n*log(n)
+
+
+Conclusiones: 
+El tiempo necesario de c√°lculo del primer algoritmo es mucho mayor que en el segundo debido a la complejidad del bucle de que se realiza para su c√°lculo tal y como se pod√≠a intuir ya que el primero es un algoritmo cuadr√°tico mientras que el segundo tiene una complejidad lineal. 
