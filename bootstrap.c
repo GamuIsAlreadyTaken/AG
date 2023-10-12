@@ -60,9 +60,9 @@ void print_table(
     char b[15] = "t(n)/";
     char c[15] = "t(n)/";
 
-    strncat(a, f1_name, 10);
-    strncat(b, f2_name, 10);
-    strncat(c, f3_name, 10);
+    strncat_s(a, f1_name, 10);
+    strncat_s(b, f2_name, 10);
+    strncat_s(c, f3_name, 10);
 
     printf("%5s%15s\t%15s\t%15s\t%15s\n",
            "n",

@@ -1,3 +1,10 @@
+
+.vscode
+
+bin
+bin/*
+
+
 # Prerequisites
 *.d
 
@@ -52,8 +59,3 @@ Mkfile.old
 dkms.conf
 
 
-.vscode
-.vscode/*
-
-bin
-bin/*
