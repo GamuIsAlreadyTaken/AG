@@ -12,7 +12,7 @@ void init_rand_seed()
 }
 
 // Inicializar aleatorio
-void rand_fill_int(int v[], int n)
+void aleatorio(int v[], int n)
 {
     int i, m = 2 * n + 1;
     for (i = 0; i < n; i++)

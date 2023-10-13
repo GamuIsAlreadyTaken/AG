@@ -15,7 +15,7 @@
 
 // Arg init
 void init_rand_seed();
-void rand_fill_int(int v[], int n);
+void aleatorio(int v[], int n);
 void asc_fill_int(int v[], int n);
 void desc_fill_int(int v[], int n);
 // Timing
@@ -29,7 +29,7 @@ void print_table(
 void print_vector_int(int v[], int n);
 void print_vector_double(double v[], int n);
 /// Toma el tiempo de lo que tenga entre los paréntesis
-#define time_it$(func) ({        \
+#define TIME_IT$(func) ({        \
     double start, end;           \
     start = get_micro_seconds(); \
     func;                        \
@@ -38,14 +38,14 @@ void print_vector_double(double v[], int n);
 })
 
 /// Repite la ejecución de la función para tomar los tiempos de las funciones demasiado rápidas
-#define time_repeated$(init, func) ({                                    \
+#define TIME_REPEATED$(init, func) ({                                    \
     int i;                                                               \
     double t_shared, t_extra;                                            \
-    t_shared = time_it$(for (i = 0; i < REPS_FOR_UNTRUSTFUL_TIME; i++) { \
+    t_shared = TIME_IT$(for (i = 0; i < REPS_FOR_UNTRUSTFUL_TIME; i++) { \
         init;                                                            \
         func;                                                            \
     });                                                                  \
-    t_extra = time_it$(for (i = 0; i < REPS_FOR_UNTRUSTFUL_TIME; i++) {  \
+    t_extra = TIME_IT$(for (i = 0; i < REPS_FOR_UNTRUSTFUL_TIME; i++) {  \
         init;                                                            \
     });                                                                  \
     (t_shared - t_extra) / REPS_FOR_UNTRUSTFUL_TIME;                     \
@@ -55,7 +55,7 @@ void print_vector_double(double v[], int n);
 /// El cuerpo tiene acceso implícitamente a:
 /// - `int i` el step en el que está
 /// - `int n`
-#define exponential_increment$(body) ({       \
+#define EXPONENTIAL_INCREMENT$(body) ({       \
     int i;                                    \
     int n = EXP_INCREMENT_START;              \
     for (i = 0; i < EXP_INCREMENT_STEPS; i++) \

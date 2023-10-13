@@ -70,13 +70,13 @@ void time_sumaSubMax1()
     int v[LAST_N];
     double t;
     double times[EXP_INCREMENT_STEPS];
-    exponential_increment$({
-        rand_fill_int(v, n);
-        t = time_it$(sumaSubMax1(v, n));
+    EXPONENTIAL_INCREMENT$({
+        aleatorio(v, n);
+        t = TIME_IT$(sumaSubMax1(v, n));
 
         if (t < TRUSTED_TIME)
         {
-            t = time_repeated$(rand_fill_int(v, n), sumaSubMax1(v, n));
+            t = TIME_REPEATED$(aleatorio(v, n), sumaSubMax1(v, n));
         }
         times[i] = t;
     });
@@ -91,13 +91,13 @@ void time_sumaSubMax2()
     int v[LAST_N];
     double t;
     double times[EXP_INCREMENT_STEPS];
-    exponential_increment$({
-        rand_fill_int(v, n);
-        t = time_it$(sumaSubMax2(v, n));
+    EXPONENTIAL_INCREMENT$({
+        aleatorio(v, n);
+        t = TIME_IT$(sumaSubMax2(v, n));
 
         if (t < TRUSTED_TIME)
         {
-            t = time_repeated$(rand_fill_int(v, n), sumaSubMax2(v, n));
+            t = TIME_REPEATED$(aleatorio(v, n), sumaSubMax2(v, n));
         }
         times[i] = t;
     });
