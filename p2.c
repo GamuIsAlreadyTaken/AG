@@ -98,7 +98,7 @@ void ord_shell(int v[], int n)
             j = i;
             seguir = true;
 
-            while (j - incremento > 0)
+            while (j - incremento > 0 && seguir)
             {
                 if (tmp < v[j - incremento])
                 {
