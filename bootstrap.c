@@ -20,7 +20,7 @@ void aleatorio(int v[], int n)
 }
 
 // Inicializar ascendente
-void asc_fill_int(int v[], int n)
+void ascencente(int v[], int n)
 {
     int i;
     for (i = 0; i < n; i++)
@@ -28,7 +28,7 @@ void asc_fill_int(int v[], int n)
 }
 
 // Inicializar descendente
-void desc_fill_int(int v[], int n)
+void descendente(int v[], int n)
 {
     int i;
     for (i = 0; i < n; i++)

@@ -1,0 +1,4 @@
+
+A mejorar con respecto al anterior: 
+    - Anotar anomalias
+    - Usar saltos de linea
