@@ -120,6 +120,7 @@ double unknown(double n)
     return -1;
 }
 
+// ORD_INS
 void time_ord_ins_rand()
 {
     MEASURE_TIME_TABLE$(aleatorio, ord_ins,
@@ -139,6 +140,7 @@ void time_ord_ins_desc()
                         unknown, unknown, unknown);
 }
 
+// ORD_SHELL
 void time_ord_shell_rand()
 {
     MEASURE_TIME_TABLE$(aleatorio, ord_shell,
