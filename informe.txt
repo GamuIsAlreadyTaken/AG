@@ -3,9 +3,9 @@ Autores:
 	Victor Diez Ruiz - v.druiz
 	Ismael Miguez Valero - i.miguezv
 
-Para la realizacion de la primera practica (P1) se pide la suma de la subsecuencia maxima y para realizarlo se han desarrollado dos algoritmos, uno lineal y el otro cuadratico. En los cuales se aplicarán distintos vectores aleatorios y a partir de los resultados estudiaremos la complejidad computacional.
+Para la realizacion de la primera practica (P1) se pide la suma de la subsecuencia maxima y para realizarlo se han desarrollado dos algoritmos, uno lineal y el otro cuadrático. En los cuales se aplicarán distintos vectores aleatorios y a partir de los resultados estudiaremos la complejidad computacional.
 
-Todo esto se realiza en tres maquinas diferentes y los mejores resultados obtenidos, reflejados en este informe, se consiguieron en una maquina con las siguientes caracteristicas:
+Todo esto se realiza en tres maquinas diferentes pero los mejores resultados obtenidos se consiguienron en una maquina con las siguientes caracteristicas:
 
 MacBook Air (13-inch, 2017)
 Procesador 1,8 GHz Intel Core i5 de doble núcleo
