@@ -6,55 +6,56 @@
 // Tests //TODO move to bootstrap
 void test_ins_sort()
 {
-
+    printf("Test insertion sort\n");
     const int n = 10;
     int v[10] = {0};
     // Test con inicialización aleatoria
     aleatorio(v, n);
 
-    printf("Vector aleatoriamente ordenado: \n");
+    printf("Aleatorio:\t");
     print_vector_int(v, n);
 
     ord_ins(v, n);
 
-    printf("Vector ordenado: \n");
+    printf("Ordenado:\t");
     print_vector_int(v, n);
 
     desc_fill_int(v, n); // Test con inicialización descendente
 
-    printf("Vector ordenado descendente: \n");
+    printf("Descendente:\t");
     print_vector_int(v, n);
 
     ord_ins(v, n);
 
-    printf("Vector ordenado: \n");
+    printf("Ordenado:\t");
     print_vector_int(v, n);
 }
 
 void test_shell_sort()
 {
+    printf("Test shell sort\n");
 
     const int n = 10;
     int v[10] = {0};
     // Test con inicialización aleatoria
     aleatorio(v, n);
 
-    printf("Vector aleatoriamente ordenado: \n");
+    printf("Aleatorio:\t");
     print_vector_int(v, n);
 
     ord_shell(v, n);
 
-    printf("Vector ordenado: \n");
+    printf("Ordenado:\t");
     print_vector_int(v, n);
 
     desc_fill_int(v, n); // Test con inicialización descendente
 
-    printf("Vector ordenado descendente: \n");
+    printf("Descendente:\t");
     print_vector_int(v, n);
 
     ord_shell(v, n);
 
-    printf("Vector ordenado: \n");
+    printf("Ordenado:\t");
     print_vector_int(v, n);
 }
 
@@ -67,7 +68,6 @@ void ord_ins(int v[], int n)
     {
         x = v[i];
         j = i - 1;
-
         while (j > 0 && v[j] > x)
         {
             v[j + 1] = v[j];

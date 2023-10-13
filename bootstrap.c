@@ -49,9 +49,9 @@ void print_vector_int(int v[], int n)
     printf("[ ");
     for (i = 0; i < n; i++)
     {
-        printf("% d ", v[i]);
+        printf("%- d ", v[i]);
     }
-    printf("]");
+    printf("]\n");
 }
 
 void print_vector_double(double v[], int n)
@@ -60,7 +60,7 @@ void print_vector_double(double v[], int n)
     printf("[ ");
     for (i = 0; i < n; i++)
     {
-        printf("% f ", v[i]);
+        printf("%- f ", v[i]);
     }
     printf("]");
 }
