@@ -18,6 +18,22 @@ void rand_fill_int(int v[], int n)
         v[i] = (rand() % m) - n;
 }
 
+// Ascendente
+void asc_fill_int(int v[], int n)
+{
+    int i;
+    for(i = 0; i < n; i++)
+        v[i] = i;
+}
+
+// Descendente
+void asc_fill_int(int v[], int n)
+{
+    int i;
+    for(i = 0; i < n; i++)
+        v[i] = n-i;
+}
+
 double get_micro_seconds()
 {
     struct timeval t;
