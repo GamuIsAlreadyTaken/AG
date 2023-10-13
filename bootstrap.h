@@ -16,6 +16,8 @@
 // Arg init
 void init_rand_seed();
 void rand_fill_int(int v[], int n);
+void asc_fill_int(int v[], int n);
+void desc_fill_int(int v[], int n);
 // Timing
 double get_micro_seconds();
 // Printing

@@ -11,6 +11,7 @@ void init_rand_seed()
     srand(time(NULL));
 }
 
+// Inicializar aleatorio
 void rand_fill_int(int v[], int n)
 {
     int i, m = 2 * n + 1;
@@ -18,20 +19,20 @@ void rand_fill_int(int v[], int n)
         v[i] = (rand() % m) - n;
 }
 
-// Ascendente
+// Inicializar ascendente
 void asc_fill_int(int v[], int n)
 {
     int i;
-    for(i = 0; i < n; i++)
+    for (i = 0; i < n; i++)
         v[i] = i;
 }
 
-// Descendente
-void asc_fill_int(int v[], int n)
+// Inicializar descendente
+void desc_fill_int(int v[], int n)
 {
     int i;
-    for(i = 0; i < n; i++)
-        v[i] = n-i;
+    for (i = 0; i < n; i++)
+        v[i] = n - i;
 }
 
 double get_micro_seconds()
