@@ -8,7 +8,7 @@ void test_ins_sort()
 {
 
     const int n = 10;
-    int v[n] = {};
+    int v[10] = {0};
     // Test con inicialización aleatoria
     aleatorio(v, n);
 
@@ -35,7 +35,7 @@ void test_shell_sort()
 {
 
     const int n = 10;
-    int v[n] = {};
+    int v[10] = {0};
     // Test con inicialización aleatoria
     aleatorio(v, n);
 
@@ -63,16 +63,13 @@ void test_shell_sort()
 void ord_ins(int v[], int n)
 {
     int x, j;
-
     for (int i = 1; i < n; i++)
     {
-
         x = v[i];
         j = i - 1;
 
         while (j > 0 && v[j] > x)
         {
-
             v[j + 1] = v[j];
             j = j - 1;
         }
@@ -91,7 +88,6 @@ void ord_shell(int v[], int n)
     while (incremento != 1)
     {
         incremento = incremento / 2;
-
         for (int i = 0; i < n; i++)
         {
             tmp = v[i];
@@ -111,4 +107,10 @@ void ord_shell(int v[], int n)
             v[j] = tmp;
         }
     }
+}
+
+int main()
+{
+    test_ins_sort();
+    test_shell_sort();
 }
