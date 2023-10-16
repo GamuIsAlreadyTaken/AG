@@ -9,12 +9,12 @@ int main()
     test_ord_ins();
     test_ord_shell();
 
-    time_ord_ins_rand();
-    time_ord_ins_asc();
-    time_ord_ins_desc();
-    time_ord_shell_rand();
-    time_ord_shell_asc();
-    time_ord_shell_desc();
+    // time_ord_ins_rand();
+    // time_ord_ins_asc();
+    // time_ord_ins_desc();
+    // time_ord_shell_rand();
+    // time_ord_shell_asc();
+    // time_ord_shell_desc();
 }
 
 // Algoritmo 1
@@ -25,7 +25,7 @@ void ord_ins(int v[], int n)
     {
         x = v[i];
         j = i - 1;
-        while (j > 0 && v[j] > x)
+        while (j >= 0 && v[j] > x)
         {
             v[j + 1] = v[j];
             j = j - 1;
@@ -49,7 +49,7 @@ void ord_shell(int v[], int n)
             tmp = v[i];
             j = i;
             seguir = true;
-            while (j - incremento > 0 && seguir)
+            while (j - incremento >= 0 && seguir)
             {
                 if (tmp < v[j - incremento])
                 {
@@ -64,7 +64,7 @@ void ord_shell(int v[], int n)
     } while (incremento != 1);
 }
 
-// Tests //TODO move to bootstrap
+// Tests //MAYBE move to bootstrap
 void test_ord_ins()
 {
     printf("Test insertion sort\n");
