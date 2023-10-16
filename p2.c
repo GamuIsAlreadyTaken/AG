@@ -8,6 +8,13 @@ int main()
     init_rand_seed();
     test_ord_ins();
     test_ord_shell();
+
+    time_ord_ins_rand();
+    time_ord_ins_asc();
+    time_ord_ins_desc();
+    time_ord_shell_rand();
+    time_ord_shell_asc();
+    time_ord_shell_desc();
 }
 
 // Algoritmo 1
@@ -63,8 +70,7 @@ void test_ord_ins()
     printf("Test insertion sort\n");
     const int n = 10;
     int v[10] = {0};
-    // Test con inicialización aleatoria
-    aleatorio(v, n);
+    aleatorio(v, n); // Test con inicialización aleatoria
 
     printf("Aleatorio:\t");
     print_vector_int(v, n);
@@ -91,8 +97,7 @@ void test_ord_shell()
 
     const int n = 10;
     int v[10] = {0};
-    // Test con inicialización aleatoria
-    aleatorio(v, n);
+    aleatorio(v, n); // Test con inicialización aleatoria
 
     printf("Aleatorio:\t");
     print_vector_int(v, n);
@@ -116,8 +121,9 @@ void test_ord_shell()
 // TODO determinar la complejidad algoritmica
 double unknown(double n)
 {
-    printf("Du nono");
-    return -1;
+#include <assert.h>
+    assert(false && "Falta determinar la complejidad algoritmica");
+    return n;
 }
 
 // ORD_INS

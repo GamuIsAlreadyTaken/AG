@@ -81,7 +81,7 @@ void print_vector_double(double v[], int n);
                                                               \
     print_table(times,                                        \
                 $f1_name, $f2_name, $f3_name,                 \
-                ($f1), ($f2), ($f3));                         \
+                $f1, $f2, $f3);                               \
 })
 
 #endif

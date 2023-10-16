@@ -42,7 +42,7 @@ double get_micro_seconds()
         return 0.0;
     return (t.tv_usec + t.tv_sec * 1000000.0);
 }
-
+// TODO find a way to generalize it, (Maybe macrofn (format, v, n))
 void print_vector_int(int v[], int n)
 {
     int i;
@@ -71,8 +71,6 @@ void print_table(
     double (*f1)(double), double (*f2)(double), double (*f3)(double))
 {
     int n;
-    printf("$ ./p1\n");
-
     char a[15] = "t(n)/";
     char b[15] = "t(n)/";
     char c[15] = "t(n)/";

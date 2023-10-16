@@ -7,6 +7,11 @@ void ord_shell(int v[], int n);
 void test_ord_ins();
 void test_ord_shell();
 
-void time_ord_ins();
-void time_ord_shell();
+void time_ord_ins_rand();
+void time_ord_ins_asc();
+void time_ord_ins_desc();
+void time_ord_shell_rand();
+void time_ord_shell_asc();
+void time_ord_shell_desc();
+
 #endif
