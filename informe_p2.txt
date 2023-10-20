@@ -46,47 +46,73 @@ Descendente:	[  10  9  8  7  6  5  4  3  2  1 ]
 Ordenado:	[  1  2  3  4  5  6  7  8  9  10 ]
 
 
-
 MEDICIONES:
 
  Unidades de las medidas de tiempo:
  * µs (microsegundos)
 
-    # ORDENACIÓN POR SELECCIÓN. INICIALIZACIÓN ASCENDENTE :
+    # ORDENACIÓN POR SELECCIÓN.  ASCENDENTE :
+
+        n           t(n)	     t(n)/n^0.8	         t(n)/n	     t(n)/n^1.2
+(*)   500        2.16900	      0.0150343	      0.0043380	      0.0012517
+(*)  1000        4.30700	      0.0171465	      0.0043070	      0.0010819
+(*)  2000        8.63200	      0.0197373	      0.0043160	      0.0009438
+(*)  4000       17.89600	      0.0235022	      0.0044740	      0.0008517
+(*)  8000       33.74900	      0.0254559	      0.0042186	      0.0006991
+(*) 16000       68.63800	      0.0297350	      0.0042899	      0.0006189
+(*) 32000      137.85000	      0.0342994	      0.0043078	      0.0005410
 
 
- * Cotas: < n^1.8, n², n^2.2 >
+  * Cotas: < n^0.8, n, n^1.2 >
 
- 	- Cota subestimada: f(n) = n^1.8
- 	- Cota ajusutada: g(n) = n² || Cte. = ______________
- 	- Cota sobreestimada: h(n) = n^2.2
+  	- Cota subestimada: f(n) = n^0.8
+  	- Cota ajustada: g(n) = n || Cte. = 0.00433
+  	- Cota sobreestimada: h(n) = n^1.2
 
  - t(n) / f(n) cuando n -> infinito ---> infinito (divergente)
  - t(n) / g(n) cuando n -> infinito ---> Valor constante = Cte > 0
  - t(n) / h(n) cuando n -> infinito ---> 0 (convergente)
 
 
-     # ORDENACIÓN POR SELECCIÓN. INICIALIZACIÓN DESCENDENTE :
+     # ORDENACIÓN POR SELECCIÓN.  DESCENDENTE :
+
+       n           t(n)	     t(n)/n^1.8	       t(n)/n^2	     t(n)/n^2.2
+(*)  500      362.67700	      0.0050278	      0.0014507	      0.0004186
+    1000     1430.00000	      0.0056929	      0.0014300	      0.0003592
+    2000     5712.00000	      0.0065303	      0.0014280	      0.0003123
+    4000    22862.00000	      0.0075060	      0.0014289	      0.0002720
+    8000    91443.00000	      0.0086216	      0.0014288	      0.0002368
+   16000   366986.00000	      0.0099365	      0.0014335	      0.0002068
+   32000  1474087.00000	      0.0114618	      0.0014395	      0.0001808
 
 
-  * Cotas: < n^1.8, n², n^2.2 >
+   * Cotas: < n^1.8, n², n^2.2 >
 
-  	- Cota subestimada: f(n) = n^1.8
-  	- Cota ajusutada: g(n) = n² || Cte. = ______________
-  	- Cota sobreestimada: h(n) = n^2.2
+   	- Cota subestimada: f(n) = n^1.8
+   	- Cota ajustada: g(n) = n² || Cte. = 0.00143
+   	- Cota sobreestimada: h(n) = n^2.2
 
   - t(n) / f(n) cuando n -> infinito ---> infinito (divergente)
   - t(n) / g(n) cuando n -> infinito ---> Valor constante = Cte > 0
   - t(n) / h(n) cuando n -> infinito ---> 0 (convergente)
 
 
-      # ORDENACIÓN POR SELECCIÓN. INICIALIZACIÓN ALEATORIA :
+      # ORDENACIÓN POR SELECCIÓN.  ALEATORIO :
+
+       n           t(n)	     t(n)/n^1.8	       t(n)/n^2	     t(n)/n^2.2
+(*)  500      192.96500	      0.0026751	      0.0007719	      0.0002227
+    1000      738.00000	      0.0029380	      0.0007380	      0.0001854
+    2000     2905.00000	      0.0033212	      0.0007263	      0.0001588
+    4000    11456.00000	      0.0037612	      0.0007160	      0.0001363
+    8000    45936.00000	      0.0043310	      0.0007177	      0.0001189
+   16000   183364.00000	      0.0049648	      0.0007163	      0.0001033
+   32000   738460.00000	      0.0057419	      0.0007212	      0.0000906
 
 
    * Cotas: < n^1.8, n², n^2.2 >
 
    	- Cota subestimada: f(n) = n^1.8
-   	- Cota ajusutada: g(n) = n² || Cte. = ______________
+   	- Cota ajustada: g(n) = n² || Cte. = 0.00071
    	- Cota sobreestimada: h(n) = n^2.2
 
    - t(n) / f(n) cuando n -> infinito ---> infinito (divergente)
@@ -94,7 +120,7 @@ MEDICIONES:
    - t(n) / h(n) cuando n -> infinito ---> 0 (convergente)
 
 
-    # ORDENACIÓN SHELL. INICIALIZACIÓN ASCENDENTE :
+    # ORDENACIÓN SHELL.  ASCENDENTE :
 
 
  * Cotas: < n^1.8, n², n^2.2 >
@@ -108,7 +134,7 @@ MEDICIONES:
  - t(n) / h(n) cuando n -> infinito ---> 0 (convergente)
 
 
-     # ORDENACIÓN SHELL. INICIALIZACIÓN DESCENDENTE :
+     # ORDENACIÓN SHELL.  DESCENDENTE :
 
 
   * Cotas: < n^1.8, n², n^2.2 >
@@ -122,7 +148,7 @@ MEDICIONES:
   - t(n) / h(n) cuando n -> infinito ---> 0 (convergente)
 
 
-      # ORDENACIÓN SHELL. INICIALIZACIÓN ALEATORIA :
+      # ORDENACIÓN SHELL.  ALEATORIA :
 
 
    * Cotas: < n^1.8, n², n^2.2 >
