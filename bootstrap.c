@@ -34,17 +34,16 @@ void descendente(int v[], int n) {
         v[i] = n - i;
 }
 
-double get_micro_seconds()
-{
+double get_micro_seconds() {
     struct timeval t;
     
     if (gettimeofday(&t, NULL) < 0)
         return 0.0;
     return (t.tv_usec + t.tv_sec * 1000000.0);
 }
+
 // TODO find a way to generalize it, (Maybe macrofn (format, v, n))
-void print_vector_int(int v[], int n)
-{
+void print_vector_int(int v[], int n) {
     int i;
     printf("[ ");
     
@@ -54,8 +53,7 @@ void print_vector_int(int v[], int n)
     printf("]\n");
 }
 
-void print_vector_double(double v[], int n)
-{
+void print_vector_double(double v[], int n) {
     int i;
     printf("[ ");
     
@@ -68,8 +66,8 @@ void print_vector_double(double v[], int n)
 void print_table(
     double tiempos[],
     char *f1_name, char *f2_name, char *f3_name,
-    double (*f1)(double), double (*f2)(double), double (*f3)(double))
-{
+    double (*f1)(double), double (*f2)(double), double (*f3)(double)) {
+    
     int n;
     char a[15] = "t(n)/";
     char b[15] = "t(n)/";
@@ -82,8 +80,7 @@ void print_table(
     printf("%5s%15s\t%15s\t%15s\t%15s\n",
            "n", "t(n)", a, b, c);
 
-    for (int i = 0; i < EXP_INCREMENT_STEPS; i++)
-    {
+    for (int i = 0; i < EXP_INCREMENT_STEPS; i++) {
         n = EXP_INCREMENT_START * pow(EXP_INCREMENT_BASE, i);
         printf("%5d%15.5lf\t%15.7lf\t%15.7lf\t%15.7lf\n",
                n,

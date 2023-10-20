@@ -28,6 +28,7 @@ void print_table(
 
 void print_vector_int(int v[], int n);
 void print_vector_double(double v[], int n);
+
 /// Toma el tiempo de lo que tenga entre los paréntesis
 #define TIME_IT($body) ({        \
     double start, end;           \
