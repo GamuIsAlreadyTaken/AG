@@ -6,31 +6,30 @@
 
 #include "bootstrap.h"
 
-void init_rand_seed()
-{
+void init_rand_seed() {
     srand(time(NULL));
 }
 
 // Inicializar aleatorio
-void aleatorio(int v[], int n)
-{
+void aleatorio(int v[], int n) {
     int i, m = 2 * n + 1;
+    
     for (i = 0; i < n; i++)
         v[i] = (rand() % m) - n;
 }
 
 // Inicializar ascendente
-void ascencente(int v[], int n)
-{
+void ascencente(int v[], int n) {
     int i;
+    
     for (i = 0; i < n; i++)
         v[i] = i;
 }
 
 // Inicializar descendente
-void descendente(int v[], int n)
-{
+void descendente(int v[], int n) {
     int i;
+    
     for (i = 0; i < n; i++)
         v[i] = n - i;
 }
@@ -38,6 +37,7 @@ void descendente(int v[], int n)
 double get_micro_seconds()
 {
     struct timeval t;
+    
     if (gettimeofday(&t, NULL) < 0)
         return 0.0;
     return (t.tv_usec + t.tv_sec * 1000000.0);
@@ -47,10 +47,10 @@ void print_vector_int(int v[], int n)
 {
     int i;
     printf("[ ");
+    
     for (i = 0; i < n; i++)
-    {
         printf("%- d ", v[i]);
-    }
+    
     printf("]\n");
 }
 
@@ -58,10 +58,10 @@ void print_vector_double(double v[], int n)
 {
     int i;
     printf("[ ");
+    
     for (i = 0; i < n; i++)
-    {
         printf("%- f ", v[i]);
-    }
+    
     printf("]");
 }
 
@@ -80,11 +80,7 @@ void print_table(
     strncat(c, f3_name, 10);
 
     printf("%5s%15s\t%15s\t%15s\t%15s\n",
-           "n",
-           "t(n)",
-           a,
-           b,
-           c);
+           "n", "t(n)", a, b, c);
 
     for (int i = 0; i < EXP_INCREMENT_STEPS; i++)
     {
