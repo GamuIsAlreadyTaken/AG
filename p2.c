@@ -25,7 +25,7 @@ void ord_ins(int v[], int n) // Mejor : linear, Peor : n^2, Medio : n^2
     {
         x = v[i];
         j = i - 1;
-        while (j >= 0 && v[j] > x)
+        while (j >= 0 && v[j] > x) // mejor caso const
         {
             v[j + 1] = v[j];
             j = j - 1;
@@ -126,26 +126,51 @@ double unknown(double n)
     return n;
 }
 
+double n_to_1_8(double n)
+{
+    return pow(n, 1.8);
+}
+double n_squared(double n)
+{
+    return n * n;
+}
+double n_to_2_2(double n)
+{
+    return pow(n, 2.2);
+}
+double n_to_1_2(double n)
+{
+    return pow(n, 1.2);
+}
+double linear(double n)
+{
+    return n;
+}
+double n_to_0_8(double n)
+{
+    return pow(n, 0.8);
+}
+
 // ORD_INS
 void time_ord_ins_rand()
 {
     MEASURE_TIME_TABLE(aleatorio, ord_ins,
-                       "unknown", "unknown", "unknown",
-                       unknown, unknown, unknown);
+                       "n^1.8", "n^2", "n^2.2",
+                       n_to_1_8, n_squared, n_to_2_2);
 }
 
 void time_ord_ins_asc()
 {
     MEASURE_TIME_TABLE(ascencente, ord_ins,
-                       "unknown", "unknown", "unknown",
-                       unknown, unknown, unknown);
+                       "n^0.8", "n", "n^1.2",
+                       n_to_0_8, linear, n_to_1_2);
 }
 
 void time_ord_ins_desc()
 {
     MEASURE_TIME_TABLE(descendente, ord_ins,
-                       "unknown", "unknown", "unknown",
-                       unknown, unknown, unknown);
+                       "n^1.8", "n^2", "n^2.2",
+                       n_to_1_8, n_squared, n_to_2_2);
 }
 
 // ORD_SHELL

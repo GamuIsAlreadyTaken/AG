@@ -10,13 +10,13 @@ vector dependiendo del orden inicial de este. Los casos analizados son:
         - Vector ordenado aleatoriamente.
 
 Para ello se contemplan dos tipos de algoritmos:
-        -Ordenación por inserción.
-        -Ordenación shell.
+        - Ordenación por inserción.
+        - Ordenación shell.
 
 Las medidas están realizadas en microsegundos. Si la medida del tiempo de ejecución es menor a
 500 microsegundos, se realiza automáticamente un bucle de 1000 iteraciones del algoritmo a analizar
 y se calcula la media de los tiempos de ejecución de cada iteraición. 
-En los casos en que se realice dicho bucle y se calcule la media será señalizado con un '*' en 
+Los casos en que se realice dicho bucle y se calcule la media se señalizaran con un '*' en 
 las tablas de resultados.
 
 Todo esto se realiza en tres maquinas diferentes y los mejores resultados obtenidos, reflejados en este
