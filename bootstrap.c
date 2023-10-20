@@ -69,13 +69,13 @@ void print_table(
     double (*f1)(double), double (*f2)(double), double (*f3)(double)) {
     
     int n;
-    char a[15] = "t(n)/";
-    char b[15] = "t(n)/";
-    char c[15] = "t(n)/";
+    char a[30] = "t(n)/";
+    char b[30] = "t(n)/";
+    char c[30] = "t(n)/";
 
-    strncat(a, f1_name, 10);
-    strncat(b, f2_name, 10);
-    strncat(c, f3_name, 10);
+    strncat(a, f1_name, 25);
+    strncat(b, f2_name, 25);
+    strncat(c, f3_name, 25);
 
     printf("%5s%15s\t%15s\t%15s\t%15s\n",
            "n", "t(n)", a, b, c);
