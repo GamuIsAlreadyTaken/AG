@@ -9,9 +9,9 @@ int main()
     test_ord_ins();
     test_ord_shell();
 
-    // time_ord_ins_rand();
-    // time_ord_ins_asc();
-    // time_ord_ins_desc();
+    time_ord_ins_rand();
+    time_ord_ins_asc();
+    time_ord_ins_desc();
     // time_ord_shell_rand();
     // time_ord_shell_asc();
     // time_ord_shell_desc();
@@ -154,6 +154,7 @@ double n_to_0_8(double n)
 // ORD_INS
 void time_ord_ins_rand()
 {
+    printf("Insertion sort, caso aleatorio\n");
     MEASURE_TIME_TABLE(aleatorio, ord_ins,
                        "n^1.8", "n^2", "n^2.2",
                        n_to_1_8, n_squared, n_to_2_2);
@@ -161,6 +162,7 @@ void time_ord_ins_rand()
 
 void time_ord_ins_asc()
 {
+    printf("Insertion sort, case ascendente\n");
     MEASURE_TIME_TABLE(ascencente, ord_ins,
                        "n^0.8", "n", "n^1.2",
                        n_to_0_8, linear, n_to_1_2);
@@ -168,6 +170,7 @@ void time_ord_ins_asc()
 
 void time_ord_ins_desc()
 {
+    printf("Insertion sort, caso descendente\n");
     MEASURE_TIME_TABLE(descendente, ord_ins,
                        "n^1.8", "n^2", "n^2.2",
                        n_to_1_8, n_squared, n_to_2_2);
@@ -176,6 +179,7 @@ void time_ord_ins_desc()
 // ORD_SHELL
 void time_ord_shell_rand()
 {
+    printf("Shell sort, caso aleatorio\n");
     MEASURE_TIME_TABLE(aleatorio, ord_shell,
                        "unknown", "unknown", "unknown",
                        unknown, unknown, unknown);
@@ -183,6 +187,7 @@ void time_ord_shell_rand()
 
 void time_ord_shell_asc()
 {
+    printf("Shell sort, caso ascendente\n");
     MEASURE_TIME_TABLE(ascencente, ord_shell,
                        "unknown", "unknown", "unknown",
                        unknown, unknown, unknown);
@@ -190,6 +195,7 @@ void time_ord_shell_asc()
 
 void time_ord_shell_desc()
 {
+    printf("Shell sort, caso descendente\n");
     MEASURE_TIME_TABLE(descendente, ord_shell,
                        "unknown", "unknown", "unknown",
                        unknown, unknown, unknown);
