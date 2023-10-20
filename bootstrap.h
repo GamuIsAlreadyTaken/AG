@@ -29,7 +29,7 @@ void print_table(
 void print_vector_int(int v[], int n);
 void print_vector_double(double v[], int n);
 /// Toma el tiempo de lo que tenga entre los paréntesis
-#define TIME_IT($body) ({       \
+#define TIME_IT($body) ({        \
     double start, end;           \
     start = get_micro_seconds(); \
     $body;                       \
@@ -39,29 +39,29 @@ void print_vector_double(double v[], int n);
 
 /// Repite la ejecución de la función para tomar los tiempos de las funciones demasiado rápidas
 #define TIME_REPEATED($init, $body) ({                                  \
-    int i;                                                               \
-    double t_shared, t_extra;                                            \
-    
+    int i;                                                              \
+    double t_shared, t_extra;                                           \
+                                                                        \
     t_shared = TIME_IT(for (i = 0; i < REPS_FOR_UNTRUSTFUL_TIME; i++) { \
-        $init;                                                           \
-        $body;                                                           \
-    });                                                                  \
-    
+        $init;                                                          \
+        $body;                                                          \
+    });                                                                 \
+                                                                        \
     t_extra = TIME_IT(for (i = 0; i < REPS_FOR_UNTRUSTFUL_TIME; i++) {  \
-        $init;                                                           \
-    });                                                                  \
-    
-    (t_shared - t_extra) / REPS_FOR_UNTRUSTFUL_TIME;                     \
+        $init;                                                          \
+    });                                                                 \
+                                                                        \
+    (t_shared - t_extra) / REPS_FOR_UNTRUSTFUL_TIME;                    \
 })
 
 /// Llama progresivamente con un `n` exponencialmente mayor a lo que tenga entre paréntesis
 /// El cuerpo tiene acceso implícitamente a:
 /// - `int i` el step en el que está
 /// - `int n`
-#define EXPONENTIAL_INCREMENT($body) ({      \
+#define EXPONENTIAL_INCREMENT($body) ({       \
     int i;                                    \
     int n = EXP_INCREMENT_START;              \
-    
+                                              \
     for (i = 0; i < EXP_INCREMENT_STEPS; i++) \
     {                                         \
         $body;                                \
@@ -70,24 +70,24 @@ void print_vector_double(double v[], int n);
 })
 
 #define MEASURE_TIME_TABLE($init, $func,                     \
-                            $f1_name, $f2_name, $f3_name,     \
-                            $f1, $f2, $f3) ({                 \
-    int v[LAST_N];                                            \
-    double t;                                                 \
-    double times[EXP_INCREMENT_STEPS];                        \
-    
+                           $f1_name, $f2_name, $f3_name,     \
+                           $f1, $f2, $f3) ({                 \
+    int v[LAST_N];                                           \
+    double t;                                                \
+    double times[EXP_INCREMENT_STEPS];                       \
+                                                             \
     EXPONENTIAL_INCREMENT({                                  \
-        ($init)(v, n);                                        \
-        t = TIME_IT$(($func)(v, n));                          \
-        
-        if (t < TRUSTED_TIME)                                 \
+        ($init)(v, n);                                       \
+        t = TIME_IT(($func)(v, n));                          \
+                                                             \
+        if (t < TRUSTED_TIME)                                \
             t = TIME_REPEATED(($init)(v, n), ($func)(v, n)); \
-        times[i] = t;                                         \
-    });                                                       \
-                                                              \
-    print_table(times,                                        \
-                $f1_name, $f2_name, $f3_name,                 \
-                $f1, $f2, $f3);                               \
+        times[i] = t;                                        \
+    });                                                      \
+                                                             \
+    print_table(times,                                       \
+                $f1_name, $f2_name, $f3_name,                \
+                $f1, $f2, $f3);                              \
 })
 
 #endif
