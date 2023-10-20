@@ -3,7 +3,7 @@ Autores:
 	Victor Diez Ruiz - v.druiz
 	Ismael Miguez Valero - i.miguezv
 
-Para la realizacion de la segunda practica (P2) nos propone el análisis de algoritmos de ordenación de un
+Para la realización de la segunda practica (P2) nos propone el análisis de algoritmos de ordenación de un
 vector dependiendo del orden inicial de este. Los casos analizados son:
         - Vector ordenado ascendentemente.
         - vector ordenado descendentemente.
@@ -15,16 +15,37 @@ Para ello se contemplan dos tipos de algoritmos:
 
 Las medidas están realizadas en microsegundos. Si la medida del tiempo de ejecución es menor a
 500 microsegundos, se realiza automáticamente un bucle de 1000 iteraciones del algoritmo a analizar
-y se calcula la media de los tiempos de ejecución de cada iteraición. 
+y calculamos la media de los tiempos de ejecución de cada iteración. 
 Los casos en que se realice dicho bucle y se calcule la media se señalizaran con un '*' en 
 las tablas de resultados.
 
 Todo esto se realiza en tres maquinas diferentes y los mejores resultados obtenidos, reflejados en este
-informe, se consiguieron en una maquina con las siguientes caracteristicas:
+informe, se consiguieron en una maquina con las siguientes características:
 
         MacBook Air (13-inch, 2017)
         Procesador 1,8 GHz Intel Core i5 de doble núcleo
         Memoria 8 GB 1600 MHz DDR3
+
+TEST: comprobamos el correcto funcionamiento de la implementación de los algoritmos
+
+*************TEST INSERTION SORT*************
+
+Aleatorio:	[  3 -7 -8 -7 -6 -10  10 -1 -7  6 ]
+Ordenado:	[ -10 -8 -7 -7 -7 -6 -1  3  6  10 ]
+
+Descendente:	[  10  9  8  7  6  5  4  3  2  1 ]
+Ordenado:	[  1  2  3  4  5  6  7  8  9  10 ]
+
+
+*************TEST SHELL SORT*************
+
+Aleatorio:	[  0  8  10  5 -3 -10  1 -9 -8  2 ]
+Ordenado:	[ -10 -9 -8 -3  0  1  2  5  8  10 ]
+
+Descendente:	[  10  9  8  7  6  5  4  3  2  1 ]
+Ordenado:	[  1  2  3  4  5  6  7  8  9  10 ]
+
+
 
 MEDICIONES:
 
