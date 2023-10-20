@@ -16,9 +16,9 @@ int main() {
     printf("\n");
 
     printf("INSERTION SHELL\n");
-    // time_ord_shell_rand();
-    // time_ord_shell_asc();
-    // time_ord_shell_desc();
+    time_ord_shell_rand();
+    time_ord_shell_asc();
+    time_ord_shell_desc();
 }
 
 // Algoritmo 1
@@ -137,6 +137,16 @@ double linear(double n) {
 double n_to_0_8(double n) {
     return pow(n, 0.8);
 }
+double n_to_nlogn(double n) {
+    return n*log(n);
+}
+double n_to_nlogn_to_0_8(double n) {
+    return pow(n*log(n), 0.8);
+}
+double n_to_nlogn_to_1_2(double n) {
+    return pow(n*log(n), 1.2);
+}
+
 
 // ORD_INS
 void time_ord_ins_rand() {
@@ -160,24 +170,24 @@ void time_ord_ins_desc() {
                        n_to_1_8, n_squared, n_to_2_2);
 }
 
-/* ORD_SHELL
+ //ORD_SHELL
 void time_ord_shell_rand() {
     printf("************ ALEATORIO ************\n");
     MEASURE_TIME_TABLE(aleatorio, ord_shell,
-                       "unknown", "unknown", "unknown",
-                       unknown, unknown, unknown);
+                       "n^1.8", "n^2", "n^2.2",
+                       n_to_1_8, n_squared, n_to_2_2);
 }
 
 void time_ord_shell_asc() {
     printf("************ ASCENDENTE ************\n");
     MEASURE_TIME_TABLE(ascencente, ord_shell,
-                       "unknown", "unknown", "unknown",
-                       unknown, unknown, unknown);
+                       "n*(log(n))^0.8", "n*log(n)", "n*(log(n))^1.2",
+                       n_to_nlogn_to_0_8, n_to_nlogn, n_to_nlogn_to_1_2);
 }
 
 void time_ord_shell_desc() {
     printf("************ DESCENDENTE ************\n");
     MEASURE_TIME_TABLE(descendente, ord_shell,
-                       "unknown", "unknown", "unknown",
-                       unknown, unknown, unknown);
-}*/
+                       "n^1.8", "n^2", "n^2.2",
+                       n_to_1_8, n_squared, n_to_2_2);
+}
