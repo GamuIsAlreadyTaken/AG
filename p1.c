@@ -109,7 +109,7 @@ void time_sumaSubMax2()
 
 int main()
 {
-    init_rand_seed();
+    inicializar_semilla();
     time_sumaSubMax1();
     time_sumaSubMax2();
     return 0;

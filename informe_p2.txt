@@ -3,8 +3,8 @@ Autores:
 	Victor Diez Ruiz - v.druiz
 	Ismael Miguez Valero - i.miguezv
 
-Para la realización de la segunda practica (P2) nos propone el análisis de algoritmos de ordenación de un
-vector dependiendo del orden inicial de este. Los casos analizados son:
+Para la realización de la segunda practica (P2) nos propone el análisis de algoritmos de ordenación 
+de un vector dependiendo del orden inicial de este. Los casos analizados son:
 	- Vector ordenado ascendentemente.
 	- vector ordenado descendentemente.
 	- Vector ordenado aleatoriamente.
@@ -16,7 +16,7 @@ Para ello se contemplan dos tipos de algoritmos:
 Las medidas están realizadas en microsegundos. Si la medida del tiempo de ejecución es menor a
 500 microsegundos, se realiza automáticamente un bucle de 1000 iteraciones del algoritmo a analizar
 y calculamos la media de los tiempos de ejecución de cada iteración. 
-Los casos en que se realice dicho bucle y se calcule la media se señalizaran con un '*' en 
+Los casos en que se realice dicho bucle y se calcule la media se señalizaran con un '(*)' en 
 las tablas de resultados.
 
 Todo esto se realiza en tres maquinas diferentes y los mejores resultados obtenidos, reflejados en este
@@ -34,16 +34,16 @@ Aleatorio:  [  3 -7 -8 -7 -6 -10  10 -1 -7  6 ]
 Ordenado:   [ -10 -8 -7 -7 -7 -6 -1  3  6  10 ]
 
 Descendente:[  10  9  8  7  6  5  4  3  2  1 ]
-Ordenado:	  [  1  2  3  4  5  6  7  8  9  10 ]
+Ordenado:   [  1  2  3  4  5  6  7  8  9  10 ]
 
 
 *************TEST SHELL SORT*************
 
-Aleatorio:	[  0  8  10  5 -3 -10  1 -9 -8  2 ]
-Ordenado:	  [ -10 -9 -8 -3  0  1  2  5  8  10 ]
+Aleatorio:  [  0  8  10  5 -3 -10  1 -9 -8  2 ]
+Ordenado:   [ -10 -9 -8 -3  0  1  2  5  8  10 ]
 
 Descendente:[  10  9  8  7  6  5  4  3  2  1 ]
-Ordenado:	  [  1  2  3  4  5  6  7  8  9  10 ]
+Ordenado:   [  1  2  3  4  5  6  7  8  9  10 ]
 
 
 MEDICIONES:
@@ -53,21 +53,21 @@ Unidades de las medidas de tiempo:
 
 		# ORDENACIÓN POR SELECCIÓN.  ASCENDENTE :
 
-				n           t(n)	     t(n)/n^0.8	         t(n)/n	     t(n)/n^1.2
-(*)   500        2.16900	      0.0150343	      0.0043380	      0.0012517
-(*)  1000        4.30700	      0.0171465	      0.0043070	      0.0010819
-(*)  2000        8.63200	      0.0197373	      0.0043160	      0.0009438
-(*)  4000       17.89600	      0.0235022	      0.0044740	      0.0008517
-(*)  8000       33.74900	      0.0254559	      0.0042186	      0.0006991
-(*) 16000       68.63800	      0.0297350	      0.0042899	      0.0006189
-(*) 32000      137.85000	      0.0342994	      0.0043078	      0.0005410
+        n           t(n)         t(n)/n^0.8          t(n)/n     t(n)/n^1.2
+(*)   500        2.16900          0.0150343       0.0043380      0.0012517
+(*)  1000        4.30700          0.0171465       0.0043070      0.0010819
+(*)  2000        8.63200          0.0197373       0.0043160      0.0009438
+(*)  4000       17.89600          0.0235022       0.0044740      0.0008517
+(*)  8000       33.74900          0.0254559       0.0042186      0.0006991
+(*) 16000       68.63800          0.0297350       0.0042899      0.0006189
+(*) 32000      137.85000          0.0342994       0.0043078      0.0005410
 
 
 	Cotas: < n^0.8, n, n^1.2 >
 
 		- Cota subestimada: f(n) = n^0.8
 		- Cota ajustada: g(n) = n
-		- Cota sobreestimada: h(n) = n^1.2
+		- Cota sobrestimada: h(n) = n^1.2
 
  - t(n) / f(n) cuando n -> infinito ---> infinito (divergente)
  - t(n) / g(n) cuando n -> infinito ---> Valor constante = 0.00433
@@ -76,21 +76,21 @@ Unidades de las medidas de tiempo:
 
     # ORDENACIÓN POR SELECCIÓN.  DESCENDENTE :
 
-			 n           t(n)	     t(n)/n^1.8	       t(n)/n^2	     t(n)/n^2.2
-(*)  500      362.67700	      0.0050278	      0.0014507	      0.0004186
-		1000     1430.00000	      0.0056929	      0.0014300	      0.0003592
-		2000     5712.00000	      0.0065303	      0.0014280	      0.0003123
-		4000    22862.00000	      0.0075060	      0.0014289	      0.0002720
-		8000    91443.00000	      0.0086216	      0.0014288	      0.0002368
-	 16000   366986.00000	      0.0099365	      0.0014335	      0.0002068
-	 32000  1474087.00000	      0.0114618	      0.0014395	      0.0001808
+       n           t(n)      t(n)/n^1.8        t(n)/n^2      t(n)/n^2.2
+(*)  500      362.67700       0.0050278       0.0014507       0.0004186
+    1000     1430.00000       0.0056929       0.0014300       0.0003592
+    2000     5712.00000       0.0065303       0.0014280       0.0003123
+    4000    22862.00000       0.0075060       0.0014289       0.0002720
+    8000    91443.00000       0.0086216       0.0014288       0.0002368
+   16000   366986.00000       0.0099365       0.0014335       0.0002068
+   32000  1474087.00000       0.0114618       0.0014395       0.0001808
 
 
 	Cotas: < n^1.8, n², n^2.2 >
 
 	 	- Cota subestimada: f(n) = n^1.8
 	 	- Cota ajustada: g(n) = n²
-	 	- Cota sobreestimada: h(n) = n^2.2
+	 	- Cota sobrestimada: h(n) = n^2.2
 
 	- t(n) / f(n) cuando n -> infinito ---> infinito (divergente)
 	- t(n) / g(n) cuando n -> infinito ---> Valor constante = 0.00143
@@ -99,21 +99,21 @@ Unidades de las medidas de tiempo:
 
 		# ORDENACIÓN POR SELECCIÓN.  ALEATORIO :
 
-			 n           t(n)	     t(n)/n^1.8	       t(n)/n^2	     t(n)/n^2.2
-(*)  500      192.96500	      0.0026751	      0.0007719	      0.0002227
-		1000      738.00000	      0.0029380	      0.0007380	      0.0001854
-		2000     2905.00000	      0.0033212	      0.0007263	      0.0001588
-		4000    11456.00000	      0.0037612	      0.0007160	      0.0001363
-		8000    45936.00000	      0.0043310	      0.0007177	      0.0001189
-	 16000   183364.00000	      0.0049648	      0.0007163	      0.0001033
-	 32000   738460.00000	      0.0057419	      0.0007212	      0.0000906
+       n           t(n)      t(n)/n^1.8        t(n)/n^2      t(n)/n^2.2
+(*)  500      192.96500       0.0026751       0.0007719       0.0002227
+    1000      738.00000       0.0029380       0.0007380       0.0001854
+    2000     2905.00000       0.0033212       0.0007263       0.0001588
+    4000    11456.00000       0.0037612       0.0007160       0.0001363
+    8000    45936.00000       0.0043310       0.0007177       0.0001189
+   16000   183364.00000       0.0049648       0.0007163       0.0001033
+   32000   738460.00000       0.0057419       0.0007212       0.0000906
 
 
 	Cotas: < n^1.8, n², n^2.2 >
 
 	 	- Cota subestimada: f(n) = n^1.8
 	 	- Cota ajustada: g(n) = n²
-	 	- Cota sobreestimada: h(n) = n^2.2
+	 	- Cota sobrestimada: h(n) = n^2.2
 
 	- t(n) / f(n) cuando n -> infinito ---> infinito (divergente)
 	- t(n) / g(n) cuando n -> infinito ---> Valor constante = 0.00072
@@ -122,20 +122,20 @@ Unidades de las medidas de tiempo:
 
 		# ORDENACIÓN SHELL.  ASCENDENTE :
 
-	 		 n           t(n) t(n)/(n*log n)^0.8    	t(n)/n*log n   t(n)/(n*log n)^1.25
-(*)	 500       19.37400          0.0311395    	   0.0062350 			       0.0008351
-(*) 1000       44.91400          0.0380989    	   0.0065020 			       0.0007132
-(*) 2000       98.81500          0.0445971    	   0.0065002 			       0.0005854
-(*) 4000      219.59200          0.0530830    	   0.0066190 			       0.0004904
-(*) 8000      483.59800          0.0629670    	   0.0067262 			       0.0004108
-	 16000     1053.00000          0.0742027    	   0.0067986 			       0.0003427
-	 32000     2284.00000          0.0874654    	   0.0068805 			       0.0002867
+       n           t(n) t(n)/(n*log n)^0.8      t(n)/n*log n   t(n)/(n*log n)^1.25
+(*)  500       19.37400          0.0311395         0.0062350             0.0008351
+(*) 1000       44.91400          0.0380989         0.0065020             0.0007132
+(*) 2000       98.81500          0.0445971         0.0065002             0.0005854
+(*) 4000      219.59200          0.0530830         0.0066190             0.0004904
+(*) 8000      483.59800          0.0629670         0.0067262             0.0004108
+   16000     1053.00000          0.0742027         0.0067986             0.0003427
+   32000     2284.00000          0.0874654         0.0068805             0.0002867
 
 	Cotas: < (n*log n)^0.8, n*log n, (n*log n)^1.25 >
 
 	 	- Cota subestimada: f(n) = (n*log n)^0.8
-	 	- Cota ajusutada: g(n) = n*log n
-	 	- Cota sobreestimada: h(n) = (n*log n)^1.2
+	 	- Cota ajustada: g(n) = n*log n
+	 	- Cota sobrestimada: h(n) = (n*log n)^1.2
 
 	- t(n) / f(n) cuando n -> infinito ---> infinito (divergente)
 	- t(n) / g(n) cuando n -> infinito ---> Valor constante = 0.007
@@ -144,21 +144,21 @@ Unidades de las medidas de tiempo:
 
 		# ORDENACIÓN SHELL.  DESCENDENTE :
 
-			 n           t(n)   t(n)/(n*log n)^0.8   t(n)/n*log n  t(n)/(n*log n)^1.2
-(*)	 500       29.02000            0.0466434       0.0093393          0.0012509
+       n           t(n)   t(n)/(n*log n)^0.8   t(n)/n*log n  t(n)/(n*log n)^1.2
+(*)  500       29.02000            0.0466434       0.0093393          0.0012509
 (*) 1000       66.79000            0.0566555       0.0096688          0.0010606
 (*) 2000      143.23900            0.0646465       0.0094225          0.0008486
 (*) 4000      313.56700            0.0758000       0.0094516          0.0007003
- 		8000      678.00000            0.0882792       0.0094301          0.0005759
-	 16000     1479.00000            0.1042220       0.0095490          0.0004813
-	 32000     3192.00000            0.1222371       0.0096159          0.0004006
+    8000      678.00000            0.0882792       0.0094301          0.0005759
+   16000     1479.00000            0.1042220       0.0095490          0.0004813
+   32000     3192.00000            0.1222371       0.0096159          0.0004006
 
 
 	Cotas: < (n*log n)^0.8, n*log n, (n*log n)^1.2 >
 
 	 	- Cota subestimada: f(n) = (n*log n)^0.8
-	 	- Cota ajusutada: g(n) = n*log n
-	 	- Cota sobreestimada: h(n) = (n*log n)^1.2
+	 	- Cota ajustada: g(n) = n*log n
+	 	- Cota sobrestimada: h(n) = (n*log n)^1.2
 
 	- t(n) / f(n) cuando n -> infinito ---> infinito (divergente)
 	- t(n) / g(n) cuando n -> infinito ---> Valor constante = 0.0096
@@ -167,21 +167,21 @@ Unidades de las medidas de tiempo:
 
 		# ORDENACIÓN SHELL.  ALEATORIA :
 
-			 n           t(n)        t(n)/n*logn      t(n)/n^1.2      t(n)/n^1.4
-(*)	 500       65.17800          0.0209757       0.0376129       0.0108528
+       n           t(n)       t(n)/n*log n      t(n)/n^1.2      t(n)/n^1.4
+(*)  500       65.17800          0.0209757       0.0376129       0.0108528
 (*) 1000      148.19200          0.0214530       0.0372241       0.0093503
 (*) 2000      331.81100          0.0218271       0.0362790       0.0079332
-	  4000      785.00000          0.0236615       0.0373592       0.0071119
-	  8000     1712.00000          0.0238117       0.0354647       0.0058773
-	 16000     3892.00000          0.0251282       0.0350937       0.0050630
-	 32000     8948.00000          0.0269557       0.0351193       0.0044108
+    4000      785.00000          0.0236615       0.0373592       0.0071119
+    8000     1712.00000          0.0238117       0.0354647       0.0058773
+   16000     3892.00000          0.0251282       0.0350937       0.0050630
+   32000     8948.00000          0.0269557       0.0351193       0.0044108
 
 
 	Cotas: < (n*log n)^0.8, n*log n, (n*log n)^1.2 >
 
 	 	- Cota subestimada: f(n) = (n*log n)^0.8
 	 	- Cota ajustada: g(n) = n*log n
-	 	- Cota sobreestimada: h(n) = (n*log n)^1.2
+	 	- Cota sobrestimada: h(n) = (n*log n)^1.2
 
 	- t(n) / f(n) cuando n -> infinito ---> infinito (divergente)
 	- t(n) / g(n) cuando n -> infinito ---> Valor constante = 0.035

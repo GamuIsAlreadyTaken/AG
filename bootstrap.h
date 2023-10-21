@@ -14,27 +14,27 @@
 #define REPS_FOR_UNTRUSTFUL_TIME 1000
 
 // Arg init
-void init_rand_seed();
+void inicializar_semilla();
 void aleatorio(int v[], int n);
-void ascencente(int v[], int n);
+void ascendente(int v[], int n);
 void descendente(int v[], int n);
 // Timing
-double get_micro_seconds();
+double microsegundos();
 // Printing
 void print_table(
     double tiempos[],
     char *f1_name, char *f2_name, char *f3_name,
     double (*f1)(double), double (*f2)(double), double (*f3)(double));
 
-void print_vector_int(int v[], int n);
+void listar_vector(int v[], int n);
 void print_vector_double(double v[], int n);
 
 /// Toma el tiempo de lo que tenga entre los paréntesis
 #define TIME_IT($body) ({        \
     double start, end;           \
-    start = get_micro_seconds(); \
+    start = microsegundos(); \
     $body;                       \
-    end = get_micro_seconds();   \
+    end = microsegundos();   \
     end - start;                 \
 })
 

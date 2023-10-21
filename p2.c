@@ -5,16 +5,16 @@
 
 int main()
 {
-    init_rand_seed();
-    // test_ord_ins();
-    // test_ord_shell();
+    inicializar_semilla();
+    test_ord_ins();
+    test_ord_shell();
 
     printf("\n");
 
-    // printf("INSERTION SORT\n");
-    // time_ord_ins_rand();
-    // time_ord_ins_asc();
-    // time_ord_ins_desc();
+    printf("INSERTION SORT\n");
+    time_ord_ins_rand();
+    time_ord_ins_asc();
+    time_ord_ins_desc();
 
     printf("\n");
 
@@ -27,9 +27,9 @@ int main()
 // Algoritmo 1
 void ord_ins(int v[], int n)
 { // Mejor : linear, Peor : n^2, Medio : n^2
-    int x, j;
+    int x, j, i;
 
-    for (int i = 1; i < n; i++)
+    for (i = 1; i < n; i++)
     {
         x = v[i];
         j = i - 1;
@@ -47,7 +47,7 @@ void ord_ins(int v[], int n)
 void ord_shell(int v[], int n)
 {
     int incremento = n;
-    int j, tmp;
+    int j, tmp, i;
     bool seguir;
     // Reducir el offset de comparación (Siempre igual)
     do // * log n
@@ -55,7 +55,7 @@ void ord_shell(int v[], int n)
         incremento = incremento / 2;
 
         // Pasar por el vector (Siempre igual)
-        for (int i = incremento; i < n; i++) // * n
+        for (i = incremento; i < n; i++) // * n
         {
             tmp = v[i];
             j = i;
@@ -90,22 +90,22 @@ void test_ord_ins()
     aleatorio(v, n); // Test con inicialización aleatoria
 
     printf("Aleatorio:\t");
-    print_vector_int(v, n);
+    listar_vector(v, n);
 
     ord_ins(v, n);
 
     printf("Ordenado:\t");
-    print_vector_int(v, n);
+    listar_vector(v, n);
 
     descendente(v, n); // Test con inicialización descendente
 
     printf("\nDescendente:\t");
-    print_vector_int(v, n);
+    listar_vector(v, n);
 
     ord_ins(v, n);
 
     printf("Ordenado:\t");
-    print_vector_int(v, n);
+    listar_vector(v, n);
 }
 
 void test_ord_shell()
@@ -117,22 +117,22 @@ void test_ord_shell()
     aleatorio(v, n); // Test con inicialización aleatoria
 
     printf("Aleatorio:\t");
-    print_vector_int(v, n);
+    listar_vector(v, n);
 
     ord_shell(v, n);
 
     printf("Ordenado:\t");
-    print_vector_int(v, n);
+    listar_vector(v, n);
 
     descendente(v, n); // Test con inicialización descendente
 
     printf("\nDescendente:\t");
-    print_vector_int(v, n);
+    listar_vector(v, n);
 
     ord_shell(v, n);
 
     printf("Ordenado:\t");
-    print_vector_int(v, n);
+    listar_vector(v, n);
 }
 
 double n_to_1_8(double n)
@@ -192,7 +192,7 @@ void time_ord_ins_rand()
 void time_ord_ins_asc()
 {
     printf("************ ASCENDENTE ************\n");
-    MEASURE_TIME_TABLE(ascencente, ord_ins,
+    MEASURE_TIME_TABLE(ascendente, ord_ins,
                        "n^0.8", "n", "n^1.2",
                        n_to_0_8, linear, n_to_1_2);
 }
@@ -217,7 +217,7 @@ void time_ord_shell_rand()
 void time_ord_shell_asc()
 {
     printf("************ ASCENDENTE ************\n");
-    MEASURE_TIME_TABLE(ascencente, ord_shell,
+    MEASURE_TIME_TABLE(ascendente, ord_shell,
                        "(n*log n)^0.8", "n*log(n)", "(n*log n)^1.25",
                        nlogn_to_0_8, nlogn, nlogn_to_1_25);
 }
