@@ -122,12 +122,20 @@ MEDICIONES:
 
     # ORDENACIÓN SHELL.  ASCENDENTE :
 
+    n           t(n)	t(n)/(n*log n)^0.8	t(n)/n*log n	t(n)/(n*log n)^1.2
+  500       19.40100	      0.0311829	      0.0062437	      0.0012502
+ 1000       45.17100	      0.0383169	      0.0065392	      0.0011160
+ 2000       99.02800	      0.0446932	      0.0065142	      0.0009495
+ 4000      220.01400	      0.0531850	      0.0066317	      0.0008269
+ 8000      486.70400	      0.0633714	      0.0067694	      0.0007231
+16000     1058.00000	      0.0745550	      0.0068309	      0.0006259
+32000     2292.00000	      0.0877717	      0.0069046	      0.0005432
 
- * Cotas: < n^1.8, n², n^2.2 >
+ * Cotas: < (n*log n)^0.8, n*log n, (n*log n)^1.2 >
 
- 	- Cota subestimada: f(n) = n^1.8
- 	- Cota ajusutada: g(n) = n² || Cte. = ______________
- 	- Cota sobreestimada: h(n) = n^2.2
+   	- Cota subestimada: f(n) = (n*log n)^0.8
+   	- Cota ajusutada: g(n) = n*log n || Cte. = ______________
+   	- Cota sobreestimada: h(n) = (n*log n)^1.2
 
  - t(n) / f(n) cuando n -> infinito ---> infinito (divergente)
  - t(n) / g(n) cuando n -> infinito ---> Valor constante = Cte > 0
@@ -136,12 +144,21 @@ MEDICIONES:
 
      # ORDENACIÓN SHELL.  DESCENDENTE :
 
+    n           t(n)	t(n)/(n*log n)^0.8	t(n)/n*log n	t(n)/(n*log n)^1.2
+  500       31.03100	      0.0498757	      0.0099865	      0.0019996
+ 1000       68.42800	      0.0580449	      0.0099060	      0.0016906
+ 2000      145.83100	      0.0658163	      0.0095930	      0.0013982
+ 4000      321.96800	      0.0778308	      0.0097048	      0.0012101
+ 8000      704.00000	      0.0916645	      0.0097917	      0.0010460
+16000     1479.00000	      0.1042220	      0.0095490	      0.0008749
+32000     3193.00000	      0.1222754	      0.0096189	      0.0007567
 
-  * Cotas: < n^1.8, n², n^2.2 >
 
-  	- Cota subestimada: f(n) = n^1.8
-  	- Cota ajusutada: g(n) = n² || Cte. = ______________
-  	- Cota sobreestimada: h(n) = n^2.2
+  * Cotas: < (n*log n)^0.8, n*log n, (n*log n)^1.2 >
+
+   	- Cota subestimada: f(n) = (n*log n)^0.8
+   	- Cota ajusutada: g(n) = n*log n || Cte. = ______________
+   	- Cota sobreestimada: h(n) = (n*log n)^1.2
 
   - t(n) / f(n) cuando n -> infinito ---> infinito (divergente)
   - t(n) / g(n) cuando n -> infinito ---> Valor constante = Cte > 0
@@ -150,16 +167,25 @@ MEDICIONES:
 
       # ORDENACIÓN SHELL.  ALEATORIA :
 
+    n           t(n)	t(n)/(n*log n)^0.8	t(n)/n*log n	t(n)/(n*log n)^1.2
+  500       65.89000	      0.1059040	      0.0212049	      0.0042458
+ 1000      145.36600	      0.1233086	      0.0210439	      0.0035914
+ 2000      334.69700	      0.1510552	      0.0220169	      0.0032091
+ 4000      748.00000	      0.1808174	      0.0225463	      0.0028113
+ 8000     1712.00000	      0.2229114	      0.0238117	      0.0025436
+16000     3894.00000	      0.2744020	      0.0251412	      0.0023035
+32000     8897.00000	      0.3407090	      0.0268021	      0.0021084
 
-   * Cotas: < n^1.8, n², n^2.2 >
+   * Cotas: < (n*log n)^0.8, n*log n, (n*log n)^1.2 >
 
-   	- Cota subestimada: f(n) = n^1.8
-   	- Cota ajusutada: g(n) = n² || Cte. = ______________
-   	- Cota sobreestimada: h(n) = n^2.2
+   	- Cota subestimada: f(n) = (n*log n)^0.8
+   	- Cota ajusutada: g(n) = n*log n || Cte. = ______________
+   	- Cota sobreestimada: h(n) = (n*log n)^1.2
 
    - t(n) / f(n) cuando n -> infinito ---> infinito (divergente)
    - t(n) / g(n) cuando n -> infinito ---> Valor constante = Cte > 0
    - t(n) / h(n) cuando n -> infinito ---> 0 (convergente)
+
 
 
 CONCLUSIÓN:
