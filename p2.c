@@ -8,7 +8,9 @@ int main()
     init_rand_seed();
     // test_ord_ins();
     // test_ord_shell();
-
+    
+    printf("\n");
+    
     // printf("INSERTION SORT\n");
     // time_ord_ins_rand();
     // time_ord_ins_asc();
