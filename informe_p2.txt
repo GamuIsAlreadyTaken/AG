@@ -180,7 +180,7 @@ Unidades de las medidas de tiempo:
 	Cotas: < (n*log n)^0.8, n*log n, (n*log n)^1.2 >
 
 	 	- Cota subestimada: f(n) = (n*log n)^0.8
-	 	- Cota ajusutada: g(n) = n*log n
+	 	- Cota ajustada: g(n) = n*log n
 	 	- Cota sobreestimada: h(n) = (n*log n)^1.2
 
 	- t(n) / f(n) cuando n -> infinito ---> infinito (divergente)
@@ -190,3 +190,15 @@ Unidades de las medidas de tiempo:
 
 
 CONCLUSIÓN:
+	Después de probar varios casos para cada algoritmo y analizar su 
+	complejidad algorítmica, podemos ver que el mejor caso para ambos es
+	el caso en el que el vector entrada ya está ordenado de manera ascendente
+	mientras que el peor caso varía entre los dos, para la ordenación por
+	inserción el peor caso es en el que el vector entrada está ordenado al
+	revés pero para la ordenación shell este caso es bastante bueno, ya que
+	el bucle 'mientras' mas interno se ejecuta a lo sumo 1 vez en cada iteración
+	lo que le dá a este caso una complejidad algorítmica cercana al mejor caso.
+
+	Por lo que para poder probar empíricamente los casos: mejor, peor y medio,
+	es necesario elaborar para cada algoritmo una entrada que produzca dichos 
+	casos, no se puede usar siempre las mismas entradas
