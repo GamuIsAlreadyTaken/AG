@@ -9,14 +9,14 @@ int main()
     // test_ord_ins();
     // test_ord_shell();
 
-    printf("INSERTION SORT\n");
-    time_ord_ins_rand();
-    time_ord_ins_asc();
-    time_ord_ins_desc();
+    // printf("INSERTION SORT\n");
+    // time_ord_ins_rand();
+    // time_ord_ins_asc();
+    // time_ord_ins_desc();
 
     printf("\n");
 
-    printf("INSERTION SHELL\n");
+    printf("SHELL SORT\n");
     time_ord_shell_rand();
     time_ord_shell_asc();
     time_ord_shell_desc();
@@ -145,6 +145,10 @@ double n_to_2_2(double n)
 {
     return pow(n, 2.2);
 }
+double n_to_1_25(double n)
+{
+    return pow(n, 1.25);
+}
 double n_to_1_2(double n)
 {
     return pow(n, 1.2);
@@ -161,17 +165,17 @@ double n_to_0_8(double n)
 {
     return pow(n, 0.8);
 }
-double n_to_nlogn(double n)
+double nlogn(double n)
 {
     return n * log(n);
 }
-double n_to_nlogn_to_0_8(double n)
+double nlogn_to_0_8(double n)
 {
     return pow(n * log(n), 0.8);
 }
-double n_to_nlogn_to_1_2(double n)
+double nlogn_to_1_25(double n)
 {
-    return pow(n * log(n), 1.2);
+    return pow(n * log(n), 1.25);
 }
 
 // ORD_INS
@@ -187,8 +191,8 @@ void time_ord_ins_asc()
 {
     printf("************ ASCENDENTE ************\n");
     MEASURE_TIME_TABLE(ascencente, ord_ins,
-                       "n^0.8", "n", "n^1.2",
-                       n_to_0_8, linear, n_to_1_2);
+                       "n^0.8", "n", "n^1.25",
+                       n_to_0_8, linear, n_to_1_25);
 }
 
 void time_ord_ins_desc()
@@ -205,7 +209,7 @@ void time_ord_shell_rand()
     printf("************ ALEATORIO ************\n");
     MEASURE_TIME_TABLE(aleatorio, ord_shell,
                        "n", "n^1.2", "n^1.4",
-                       linear, n_to_1_2, n_to_1_4);
+                       nlogn, n_to_1_2, n_to_1_4);
 }
 
 void time_ord_shell_asc()
@@ -213,13 +217,13 @@ void time_ord_shell_asc()
     printf("************ ASCENDENTE ************\n");
     MEASURE_TIME_TABLE(ascencente, ord_shell,
                        "n*(log(n))^0.8", "n*log(n)", "n*(log(n))^1.2",
-                       n_to_nlogn_to_0_8, n_to_nlogn, n_to_nlogn_to_1_2);
+                       nlogn_to_0_8, nlogn, nlogn_to_1_25);
 }
 
 void time_ord_shell_desc()
 {
     printf("************ DESCENDENTE ************\n");
     MEASURE_TIME_TABLE(descendente, ord_shell,
-                       "n^1.8", "n^2", "n^2.2",
-                       n_to_1_8, n_squared, n_to_2_2);
+                       "n*(log(n))^0.8", "n*log(n)", "n*(log(n))^1.2",
+                       nlogn_to_0_8, nlogn, nlogn_to_1_25);
 }
