@@ -131,6 +131,9 @@ double n_to_2_2(double n) {
 double n_to_1_2(double n) {
     return pow(n, 1.2);
 }
+double n_to_1_4(double n) {
+    return pow(n, 1.4);
+}
 double linear(double n) {
     return n;
 }
@@ -174,8 +177,8 @@ void time_ord_ins_desc() {
 void time_ord_shell_rand() {
     printf("************ ALEATORIO ************\n");
     MEASURE_TIME_TABLE(aleatorio, ord_shell,
-                       "n^1.8", "n^2", "n^2.2",
-                       n_to_1_8, n_squared, n_to_2_2);
+                       "n", "n^1.2", "n^1.4",
+                       linear, n_to_1_2, n_to_1_4);
 }
 
 void time_ord_shell_asc() {
