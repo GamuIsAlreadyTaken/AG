@@ -19,8 +19,8 @@ y calculamos la media de los tiempos de ejecución de cada iteración.
 Los casos en que se realice dicho bucle y se calcule la media se señalizaran con un '(*)' en 
 las tablas de resultados.
 
-Todo esto se realiza en tres maquinas diferentes y los mejores resultados obtenidos, reflejados en este
-informe, se consiguieron en una maquina con las siguientes características:
+Todo esto se realiza en tres maquinas diferentes para evitar anomalías y los mejores resultados obtenidos,
+reflejados en este informe, se consiguieron en una maquina con las siguientes características:
 
 	MacBook Air (13-inch, 2017)
 	Procesador 1,8 GHz Intel Core i5 de doble núcleo
