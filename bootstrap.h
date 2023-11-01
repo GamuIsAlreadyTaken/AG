@@ -30,12 +30,12 @@ void listar_vector(int v[], int n);
 void print_vector_double(double v[], int n);
 
 /// Toma el tiempo de lo que tenga entre los paréntesis
-#define TIME_IT($body) ({        \
-    double start, end;           \
+#define TIME_IT($body) ({    \
+    double start, end;       \
     start = microsegundos(); \
-    $body;                       \
+    $body;                   \
     end = microsegundos();   \
-    end - start;                 \
+    end - start;             \
 })
 
 /// Repite la ejecución de la función para tomar los tiempos de las funciones demasiado rápidas
@@ -70,25 +70,25 @@ void print_vector_double(double v[], int n);
     }                                         \
 })
 
-#define MEASURE_TIME_TABLE($init, $func,                     \
-                           $f1_name, $f2_name, $f3_name,     \
-                           $f1, $f2, $f3) ({                 \
-    int v[LAST_N];                                           \
-    double t;                                                \
-    double times[EXP_INCREMENT_STEPS];                       \
-                                                             \
-    EXPONENTIAL_INCREMENT({                                  \
-        ($init)(v, n);                                       \
-        t = TIME_IT(($func)(v, n));                          \
-                                                             \
-        if (t < TRUSTED_TIME)                                \
-            t = TIME_REPEATED(($init)(v, n), ($func)(v, n)); \
-        times[i] = t;                                        \
-    });                                                      \
-                                                             \
-    print_table(times,                                       \
-                $f1_name, $f2_name, $f3_name,                \
-                $f1, $f2, $f3);                              \
+#define MEASURE_TIME_TABLE($init, $func,                 \
+                           $f1_name, $f2_name, $f3_name, \
+                           $f1, $f2, $f3) ({             \
+    int v[LAST_N];                                       \
+    double t;                                            \
+    double times[EXP_INCREMENT_STEPS];                   \
+                                                         \
+    EXPONENTIAL_INCREMENT({                              \
+        ($init)(v, n);                                   \
+        t = TIME_IT($func);                              \
+                                                         \
+        if (t < TRUSTED_TIME)                            \
+            t = TIME_REPEATED(($init)(v, n), $func);     \
+        times[i] = t;                                    \
+    });                                                  \
+                                                         \
+    print_table(times,                                   \
+                $f1_name, $f2_name, $f3_name,            \
+                $f1, $f2, $f3);                          \
 })
 
 #endif

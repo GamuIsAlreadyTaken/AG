@@ -184,7 +184,7 @@ double nlogn_to_1_25(double n)
 void time_ord_ins_rand()
 {
     printf("************ ALEATORIO ************\n");
-    MEASURE_TIME_TABLE(aleatorio, ord_ins,
+    MEASURE_TIME_TABLE(aleatorio, ord_ins(v, n),
                        "n^1.8", "n^2", "n^2.2",
                        n_to_1_8, n_squared, n_to_2_2);
 }
@@ -192,7 +192,7 @@ void time_ord_ins_rand()
 void time_ord_ins_asc()
 {
     printf("************ ASCENDENTE ************\n");
-    MEASURE_TIME_TABLE(ascendente, ord_ins,
+    MEASURE_TIME_TABLE(ascendente, ord_ins(v, n),
                        "n^0.8", "n", "n^1.2",
                        n_to_0_8, linear, n_to_1_2);
 }
@@ -200,7 +200,7 @@ void time_ord_ins_asc()
 void time_ord_ins_desc()
 {
     printf("************ DESCENDENTE ************\n");
-    MEASURE_TIME_TABLE(descendente, ord_ins,
+    MEASURE_TIME_TABLE(descendente, ord_ins(v, n),
                        "n^1.8", "n^2", "n^2.2",
                        n_to_1_8, n_squared, n_to_2_2);
 }
@@ -209,7 +209,7 @@ void time_ord_ins_desc()
 void time_ord_shell_rand()
 {
     printf("************ ALEATORIO ************\n");
-    MEASURE_TIME_TABLE(aleatorio, ord_shell,
+    MEASURE_TIME_TABLE(aleatorio, ord_shell(v, n),
                        "n*logn", "n^1.2", "n^1.4",
                        nlogn, n_to_1_2, n_to_1_4);
 }
@@ -217,7 +217,7 @@ void time_ord_shell_rand()
 void time_ord_shell_asc()
 {
     printf("************ ASCENDENTE ************\n");
-    MEASURE_TIME_TABLE(ascendente, ord_shell,
+    MEASURE_TIME_TABLE(ascendente, ord_shell(v, n),
                        "(n*log n)^0.8", "n*log(n)", "(n*log n)^1.25",
                        nlogn_to_0_8, nlogn, nlogn_to_1_25);
 }
@@ -225,7 +225,7 @@ void time_ord_shell_asc()
 void time_ord_shell_desc()
 {
     printf("************ DESCENDENTE ************\n");
-    MEASURE_TIME_TABLE(descendente, ord_shell,
+    MEASURE_TIME_TABLE(descendente, ord_shell(v, n),
                        "(n*log n)^0.8", "n*log n", "(n*log n)^1.25",
                        nlogn_to_0_8, nlogn, nlogn_to_1_25);
 }
