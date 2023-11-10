@@ -22,10 +22,10 @@ void listar_monticulo(pmonticulo m);
 void test_ordenarPorMonticulos();
 void time_crearMonticulo();
 
-// Funciones auxiliares
-// void inicializarMonticulo(pmonticulo m);
-// int Padre(pmonticulo m, int i);
-// int Izquierdo(pmonticulo m, int i);
-// int Derecho(pmonticulo m, int i);
+void ordenarPorMonticulos(int v[], int n);
 
-#endif // PRACTICAS_P3_H
+void time_ordenarPorMonticulos_rand();
+void time_ordenarPorMonticulos_asc();
+void time_ordenarPorMonticulos_desc();
+
+#endif
