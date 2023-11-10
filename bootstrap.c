@@ -91,6 +91,10 @@ void print_table(
     for (i = 0; i < EXP_INCREMENT_STEPS; i++)
     {
         n = EXP_INCREMENT_START * pow(EXP_INCREMENT_BASE, i);
+        if(tiempos[i] < TRUSTED_TIME) 
+            printf(" (*) ");
+        else
+            printf("     ");
         printf("%5d%15.5lf\t%15.7lf\t%15.7lf\t%15.7lf\n",
                n,
                tiempos[i],
