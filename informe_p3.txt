@@ -1,0 +1,114 @@
+Autores: 
+	Noelia Serrano Abraldes - noelia.serrano
+	Victor Diez Ruiz - v.druiz
+	Ismael Miguez Valero - i.miguezv
+
+Para la realización de la tercera practica (P2) nos propone el análisis de algoritmos de ordenación de un
+vector dependiendo del orden inicial de este. Los casos analizados son:
+        - Vector ordenado ascendentemente
+        - vector ordenado descendentemente
+        - Vector ordenado aleatoriamente
+Para ello se contemplan dos tipos de algoritmos:
+        -Ordenación por inserción
+        -Ordenación shell.
+Las medidas están realizadas en microsegundos. Si la medida del tiempo de ejecución es menor a
+500 microsegundos se realiza automáticamente un bucle de 1000 iteraciones del algoritmo a analizar
+y se calcula la media de los tiempos tardados. En este caso se indicará con '*' en la tabla.
+
+Todo esto se realiza en tres maquinas diferentes y los mejores resultados obtenidos, reflejados en este
+informe,se consiguieron en una maquina con las siguientes caracteristicas:
+
+        MacBook Air (13-inch, 2017)
+        Procesador 1,8 GHz Intel Core i5 de doble núcleo
+        Memoria 8 GB 1600 MHz DDR3
+
+MEDICIONES:
+
+ Unidades de las medidas de tiempo:
+ * µs (microsegundos)
+
+    # ORDENACIÓN POR SELECCIÓN. INICIALIZACIÓN ASCENDENTE :
+
+
+ * Cotas: < n^1.8, n², n^2.2 >
+
+ 	- Cota subestimada: f(n) = n^1.8
+ 	- Cota ajusutada: g(n) = n² || Cte. = ______________
+ 	- Cota sobreestimada: h(n) = n^2.2
+
+ - t(n) / f(n) cuando n -> infinito ---> infinito (divergente)
+ - t(n) / g(n) cuando n -> infinito ---> Valor constante = Cte > 0
+ - t(n) / h(n) cuando n -> infinito ---> 0 (convergente)
+
+
+     # ORDENACIÓN POR SELECCIÓN. INICIALIZACIÓN DESCENDENTE :
+
+
+  * Cotas: < n^1.8, n², n^2.2 >
+
+  	- Cota subestimada: f(n) = n^1.8
+  	- Cota ajusutada: g(n) = n² || Cte. = ______________
+  	- Cota sobreestimada: h(n) = n^2.2
+
+  - t(n) / f(n) cuando n -> infinito ---> infinito (divergente)
+  - t(n) / g(n) cuando n -> infinito ---> Valor constante = Cte > 0
+  - t(n) / h(n) cuando n -> infinito ---> 0 (convergente)
+
+
+      # ORDENACIÓN POR SELECCIÓN. INICIALIZACIÓN ALEATORIA :
+
+
+   * Cotas: < n^1.8, n², n^2.2 >
+
+   	- Cota subestimada: f(n) = n^1.8
+   	- Cota ajusutada: g(n) = n² || Cte. = ______________
+   	- Cota sobreestimada: h(n) = n^2.2
+
+   - t(n) / f(n) cuando n -> infinito ---> infinito (divergente)
+   - t(n) / g(n) cuando n -> infinito ---> Valor constante = Cte > 0
+   - t(n) / h(n) cuando n -> infinito ---> 0 (convergente)
+
+
+    # ORDENACIÓN SHELL. INICIALIZACIÓN ASCENDENTE :
+
+
+ * Cotas: < n^1.8, n², n^2.2 >
+
+ 	- Cota subestimada: f(n) = n^1.8
+ 	- Cota ajusutada: g(n) = n² || Cte. = ______________
+ 	- Cota sobreestimada: h(n) = n^2.2
+
+ - t(n) / f(n) cuando n -> infinito ---> infinito (divergente)
+ - t(n) / g(n) cuando n -> infinito ---> Valor constante = Cte > 0
+ - t(n) / h(n) cuando n -> infinito ---> 0 (convergente)
+
+
+     # ORDENACIÓN SHELL. INICIALIZACIÓN DESCENDENTE :
+
+
+  * Cotas: < n^1.8, n², n^2.2 >
+
+  	- Cota subestimada: f(n) = n^1.8
+  	- Cota ajusutada: g(n) = n² || Cte. = ______________
+  	- Cota sobreestimada: h(n) = n^2.2
+
+  - t(n) / f(n) cuando n -> infinito ---> infinito (divergente)
+  - t(n) / g(n) cuando n -> infinito ---> Valor constante = Cte > 0
+  - t(n) / h(n) cuando n -> infinito ---> 0 (convergente)
+
+
+      # ORDENACIÓN SHELL. INICIALIZACIÓN ALEATORIA :
+
+
+   * Cotas: < n^1.8, n², n^2.2 >
+
+   	- Cota subestimada: f(n) = n^1.8
+   	- Cota ajusutada: g(n) = n² || Cte. = ______________
+   	- Cota sobreestimada: h(n) = n^2.2
+
+   - t(n) / f(n) cuando n -> infinito ---> infinito (divergente)
+   - t(n) / g(n) cuando n -> infinito ---> Valor constante = Cte > 0
+   - t(n) / h(n) cuando n -> infinito ---> 0 (convergente)
+
+
+CONCLUSIÓN:
