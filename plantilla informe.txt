@@ -26,29 +26,29 @@ y se calcula la media de los tiempos tardados. En este caso se indicará con '*'
 Todo esto se realiza en tres maquinas diferentes y los mejores resultados obtenidos, reflejados en este
 informe,se consiguieron en una maquina con las siguientes características:
 
+[
         MacBook Air (13-inch, 2017)
         Procesador 1,8 GHz Intel Core i5 de doble núcleo
         Memoria 8 GB 1600 MHz DDR3
 
-
         LENOVO ideapad 330
         Procesador Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz
         Memoria RAM 8 Gb 2133 MHz DDR4 Síncrono
-
-
+]
 MEDICIONES:
 
 Unidades de las medidas de tiempo:
 - µs (microsegundos)
 
-   # ORDENACIÓN POR [SELECCIÓN]. INICIALIZACIÓN [ASCENDENTE] :
+# [ORDENACIÓN POR SELECCIÓN]. INICIALIZACIÓN [ASCENDENTE] :
 
+[ Tabla de tiempos ]
 
-- Cotas: [< n^1.8, n², n^2.2 >]
+- Cotas: <[ n^1.8, n², n^2.2 ]>
 
- 	- Cota subestimada: f(n) = [n^1.8]
- 	- Cota ajustada: g(n) = [n²] 
- 	- Cota sobrestimada: h(n) = [n^2.2]
+ 	- Cota subestimada  : f(n) = [n^1.8]
+ 	- Cota ajustada     : g(n) = [n²] 
+ 	- Cota sobrestimada : h(n) = [n^2.2]
 
 - t(n) / f(n) cuando n -> infinito ---> infinito (divergente)
 - t(n) / g(n) cuando n -> infinito ---> Valor constante = [ 0 ]
