@@ -95,7 +95,7 @@ void print_table(
             printf(" (*) ");
         else
             printf("     ");
-        printf("%5d%15.5lf\t%15.7lf\t%15.7lf\t%15.7lf\n",
+        printf("%7d%15.5lf\t%15.7lf\t%15.7lf\t%15.7lf\n",
                n,
                tiempos[i],
                tiempos[i] / f1(n),
