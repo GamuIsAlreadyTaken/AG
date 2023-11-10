@@ -11,6 +11,8 @@ int main()
     inicializar_semilla();
 
     test_ordenarPorMonticulos();
+
+    printf("HEAP SORT\n");
     time_crearMonticulo();
 }
 
@@ -94,6 +96,18 @@ void test_ordenarPorMonticulos()
         printf("%- d ", quitarMenor(&m));
     printf("]\n");
 }
+
+
+void OrdenarPorMonticulo (int v[], int n){
+    struct monticulo m;
+    int i ;
+    crearMonticulo(v, n, &m);
+    for (i = 0; i < n-1; i++) {
+        V[i] = quitarMenor(M)
+    }
+}
+
+
 double n_to_1_2(double n)
 {
     return pow(n, 1.2);
@@ -112,4 +126,5 @@ void time_crearMonticulo()
     MEASURE_TIME_TABLE(aleatorio, crearMonticulo(v, n, &m),
                        "n^0.8", "n", "n^1.2",
                        n_to_0_8, linear, n_to_1_2);
+
 }
