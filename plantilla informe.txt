@@ -22,6 +22,12 @@ informe,se consiguieron en una maquina con las siguientes caracteristicas:
         Procesador 1,8 GHz Intel Core i5 de doble núcleo
         Memoria 8 GB 1600 MHz DDR3
 
+
+        LENOVO ideapad 330
+        Procesador Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz
+        Memoria RAM 8 Gb 2133 MHz DDR4 Síncrono
+
+
 MEDICIONES:
 
  Unidades de las medidas de tiempo:
