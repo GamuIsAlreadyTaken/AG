@@ -1,12 +1,11 @@
-//
-// Created by ismael on 17/11/23.
-//
 
 #include "p4.h"
 #include "bootstrap.h"
 
 
 #define TAM_MAX 1000
+
+
 matriz crearMatriz(int n) {
     int i;
     matriz aux;
@@ -36,4 +35,27 @@ void liberarMatriz(matriz m, int n) {
     for (i=0; i<n; i++)
         free(m[i]);
     free(m);
+}
+
+
+void dijkstra (matriz M, int n, matriz D){
+    int noVisitados [];
+    int m, i, j, w;
+    for (m = 0; m < n ; m++) {
+        for (j = 0; j <= n; j++) {
+            if (j >= m) noVisitados[j]=j+1;
+            else noVisitados[j]=j;
+        }
+        for (i = 0; i < n; ++i) {
+            D[m][i]= M[m][i];
+        }
+        for (i = 0; i < (n-2); ++i) {
+            //v=distanciaMinimaV;
+            for (int w = 0; w < ; w++) {
+                j= noVisitados[w];
+                if(D[m][w]>D[m][v] + M[v][w])
+                    D[m][w]=D[m][v] + M[v][w];
+            }
+        }
+    }
 }
