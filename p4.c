@@ -50,7 +50,7 @@ void dijkstra (matriz M, int n, matriz D){
             D[m][i]= M[m][i];
         }
         for (i = 0; i < (n-2); ++i) {
-            //v=distanciaMinimaV;
+            //v=distanciaMinimaVdf;
             for (int w = 0; w < ; w++) {
                 j= noVisitados[w];
                 if(D[m][w]>D[m][v] + M[v][w])
