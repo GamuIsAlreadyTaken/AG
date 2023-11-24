@@ -8,8 +8,8 @@ int main()
 {
     inicializar_semilla();
 
-    // test_dijkstra_1();
-    // test_dijkstra_2();
+    test_dijkstra_1();
+    test_dijkstra_2();
 
     time_dijkstra();
 
