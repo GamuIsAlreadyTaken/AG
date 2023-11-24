@@ -7,7 +7,10 @@
 
 #define TAM_MAX 1000
 
+typedef int ** matriz;
 
 matriz crearMatriz(int n);
 void iniMatriz(matriz m, int n);
 void liberarMatriz(matriz m, int n);
+
+#endif
