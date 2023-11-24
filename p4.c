@@ -37,10 +37,11 @@ void test_dijkstra_1()
 
     dijkstra(m, d, tam);
 
+    printf("Input:\n");
     print_matriz(m, tam);
-    printf("\n");
+    printf("Target:\n");
     print_matriz(d_obj, tam);
-    printf("\n");
+    printf("Result:\n");
     print_matriz(d, tam);
     printf("\n");
 
@@ -66,28 +67,30 @@ void test_dijkstra_2()
 
     dijkstra(m, d, tam);
 
+    printf("Input:\n");
     print_matriz(m, tam);
-    printf("\n");
+    printf("Target:\n");
     print_matriz(d_obj, tam);
-    printf("\n");
+    printf("Result:\n");
     print_matriz(d, tam);
     printf("\n");
 
     liberarMatriz(d, tam);
 }
 
-double n_to_1_9_times_logn(double n)
+double n_to_2_8(double n)
 {
-    return pow(n, 1.9) * log(n);
+    return pow(n, 2.8);
 }
-double n_to_2_times_logn(double n)
+double n_to_2_9(double n)
 {
-    return pow(n, 2) * log(n);
+    return pow(n, 2.9);
 }
-double n_to_2_1_times_logn(double n)
+double n_to_3(double n)
 {
-    return pow(n, 2.1) * log(n);
+    return pow(n, 3);
 }
+
 void time_dijkstra()
 {
     matriz m;
@@ -118,8 +121,8 @@ void time_dijkstra()
     });
     // (n * (n-1) * 2log n )/2 ->
     print_table(times,
-                "n^1.9 * logn", "n^2 * logn", "n^2.1 * logn",
-                n_to_1_9_times_logn, n_to_2_times_logn, n_to_2_1_times_logn);
+                "n^2.8", "n^2.9", "n^3",
+                n_to_2_8, n_to_2_9, n_to_3);
 }
 
 void print_matriz(matriz m, int tam)

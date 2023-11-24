@@ -3,14 +3,17 @@ Autores:
 	Victor Diez Ruiz - v.druiz
 	Ismael Miguez Valero - i.miguezv
 
-Para la realización de la tercera practica (P4) nos propone clacular el camino mínimo de los vértices de un grafo ponderado mediante el algoritmo de Difkstra. 
-Los casos analizados son:
-        - 
+Para la realización de la tercera practica (P4) nos propone calcular el camino mínimo 
+de los vértices de un grafo completo ponderado mediante el algoritmo de Dijkstra.
+El grafo se representa mediante su matriz de adyacencia generada de manera aleatoria.
 
-Las medidas están realizadas en microsegundos. Si la medida del tiempo de ejecución es menor a 500 microsegundos se realiza automáticamente un bucle de 1000 iteraciones del algoritmo a analizary se calcula la media de los tiempos. De ser así se indicará con '(*)' en la tabla.
+Las medidas están realizadas en microsegundos. Si la medida del tiempo de ejecución 
+es menor a 500 microsegundos se realiza automáticamente un bucle de 1000 iteraciones del 
+algoritmo a analizar y se calcula la media de los tiempos. De ser así se indicará con '(*)' 
+en la tabla.
 
-Todo esto se realiza en tres maquinas diferentes y los mejores resultados obtenidos, reflejados en este
-informe,se consiguieron en una maquina con las siguientes características:
+Todo esto se realiza en tres maquinas diferentes y los mejores resultados obtenidos, 
+reflejados en este informe,se consiguieron en una maquina con las siguientes características:
 
         MacBook Air (13-inch, 2017)
         Procesador 1,8 GHz Intel Core i5 de doble núcleo
@@ -22,26 +25,30 @@ MEDICIONES:
 Unidades de las medidas de tiempo:
 - µs (microsegundos)
 
-# ORDENACIÓN
+# ALGORITMO DE DIJKSTRA
+
+[Tabla]
 
 
+- Cotas: < n^2.8, n^2.9, n^3 >
 
-
-- Cotas: < n, n, n >
-
- 	- Cota subestimada  : f(n) = n
- 	- Cota ajustada     : g(n) = n 
- 	- Cota sobrestimada : h(n) = n
+ 	- Cota subestimada  : f(n) = n^2.8
+ 	- Cota ajustada     : g(n) = n^2.9 
+ 	- Cota sobrestimada : h(n) = n^3
 
 - t(n) / f(n) cuando n -> infinito ---> infinito (divergente)
-- t(n) / g(n) cuando n -> infinito ---> Valor constante = 
+- t(n) / g(n) cuando n -> infinito ---> Valor constante = [~0.09] 
 - t(n) / h(n) cuando n -> infinito ---> 0 (convergente)
 
-+ 
-
-
-
++ [Anomalias]
 
 
 CONCLUSIÓN:
-Tras analizar las diferentes partes del algoritmo y obtener empíricamente los tiempos podemos ver que:
+Tras analizar las diferentes partes del algoritmo y obtener 
+empíricamente los tiempos podemos ver que:
+
+Al necesitar tanto espacio en memoria, los procesos internos del 
+sistema operativo afectan mucho a los resultados, haciendo que las 
+mediciones sean volatiles, cuanto mas grande, o mas veces se repitan,
+las mediciones mas posible es que los procesos internos del sistema 
+interfieran con las mediciones inflando los tiempos.
