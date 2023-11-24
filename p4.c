@@ -108,16 +108,11 @@ void time_dijkstra()
 
         t = TIME_IT(dijkstra(m, d, n));
         if (t < TRUSTED_TIME)
-            t = TIME_REPEATED({
-                // Inicializar
-                m = crearMatriz(n);
-                iniMatriz(m, n);
-
-                d = crearMatriz(n);
-                // ^
-            },
+            t = TIME_REPEATED(iniMatriz(m, n),
                               dijkstra(m, d, n));
         times[i] = t;
+        liberarMatriz(m, n);
+        liberarMatriz(d, n);
     });
     // (n * (n-1) * 2log n )/2 ->
     print_table(times,
