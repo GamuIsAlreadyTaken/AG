@@ -78,17 +78,17 @@ void test_dijkstra_2()
     liberarMatriz(d, tam);
 }
 
-double n_to_2_8(double n)
+double n_to_2_7(double n)
 {
-    return pow(n, 2.8);
+    return pow(n, 2.7);
 }
 double n_to_2_9(double n)
 {
     return pow(n, 2.9);
 }
-double n_to_3(double n)
+double n_to_3_1(double n)
 {
-    return pow(n, 3);
+    return pow(n, 3.1);
 }
 
 void time_dijkstra()
@@ -116,8 +116,8 @@ void time_dijkstra()
     });
     // (n * (n-1) * 2log n )/2 ->
     print_table(times,
-                "n^2.8", "n^2.9", "n^3",
-                n_to_2_8, n_to_2_9, n_to_3);
+                "n^2.7", "n^2.9", "n^3.1",
+                n_to_2_7, n_to_2_9, n_to_3_1);
 }
 
 void print_matriz(matriz m, int tam)

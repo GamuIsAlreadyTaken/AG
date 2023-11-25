@@ -1,4 +1,5 @@
-Autores: 
+PRACTICA 4-ALGORITMOS-UDC
+Autores:
 	Noelia Serrano Abraldes - noelia.serrano
 	Victor Diez Ruiz - v.druiz
 	Ismael Miguez Valero - i.miguezv
@@ -65,27 +66,31 @@ Unidades de las medidas de tiempo:
 # ALGORITMO DE DIJKSTRA
 
 [Tabla]
-           n           t(n)	     t(n)/n^2.8	     t(n)/n^2.9	       t(n)/n^3
- (*)      16      113.60900	      0.0482922	      0.0365986	      0.0277366
-          32      727.00000	      0.0443726	      0.0313761	      0.0221863
-          64     4657.00000	      0.0408134	      0.0266268	      0.0177650
-         128    31321.00000	      0.0394137	      0.0247620	      0.0149350
-         256   231550.00000	      0.0418382	      0.0246297	      0.0138015
-         512  1788728.00000	      0.0464075	      0.0248692	      0.0133271
-        1024 14342929.00000	      0.0534316	      0.0263158	      0.0133579
+           n           t(n)	     t(n)/n^2.7	     t(n)/n^2.9	     t(n)/n^3.1
+ (*)      16       60.96200	      0.0341928	      0.0196386	      0.0112794
+ (*)      32      299.08700	      0.0258162	      0.0129081	      0.0064541
+          64     1834.00000	      0.0243620	      0.0106042	      0.0046157
+         128    11937.00000	      0.0244022	      0.0092467	      0.0035038
+         256    88293.00000	      0.0277766	      0.0091628	      0.0030226
+         512   673013.00000	      0.0325833	      0.0093571	      0.0026871
+        1024  5430684.00000	      0.0404617	      0.0101154	      0.0025289
 
-- Cotas: < n^2.8, n^2.9, n^3 >
+- Cotas: < n^2.7, n^2.9, n^3.1 >
 
- 	- Cota subestimada  : f(n) = n^2.8
+ 	- Cota subestimada  : f(n) = n^2.7
  	- Cota ajustada     : g(n) = n^2.9 
- 	- Cota sobrestimada : h(n) = n^3
+ 	- Cota sobrestimada : h(n) = n^3.1
 
 - t(n) / f(n) cuando n -> infinito ---> infinito (divergente)
-- t(n) / g(n) cuando n -> infinito ---> Valor constante = [~0.025]
+- t(n) / g(n) cuando n -> infinito ---> Valor constante = [~0.009]
 - t(n) / h(n) cuando n -> infinito ---> 0 (convergente)
 
 + [Anomalias]
-
+Los resultados obtendios con n pequeña (n=16 y n=32) son resultados poco
+confiables  y sin ajustar al valor constante. Este hecho es posiblemente debido
+al numero de errores que se producen en memoria cache o procesos intenros al ejecutar
+las 1000 iteraciones de cálculo. El coste de acceso a memoria desvirtúa la medida
+obtenida.
 
 CONCLUSIÓN:
 Tras analizar las diferentes partes del algoritmo y obtener 
