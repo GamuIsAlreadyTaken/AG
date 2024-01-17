@@ -29,8 +29,9 @@ int main()
 // Mejor caso-> n
 void crearMonticulo(int v[], int n, pmonticulo m)
 {
+    int i;
     // Copiar el vector en el struct del monticulo
-    for (int i = 0; i < n; i++) // n
+    for (i = 0; i < n; i++)
         m->vector[i] = v[i];
     m->ultimo = n;
 
@@ -111,7 +112,7 @@ void test_ordenarPorMonticulos()
 
     printf("Output:\t");
     ordenarPorMonticulos(v, n);
-    listar_vector(m.vector, m.ultimo);
+    listar_vector(v, m.ultimo);
 }
 // Todos casos-> n log n
 void ordenarPorMonticulos(int v[], int n)
@@ -119,7 +120,7 @@ void ordenarPorMonticulos(int v[], int n)
     struct monticulo m;
     int i;
     crearMonticulo(v, n, &m);
-    for (i = 0; i < n - 1; i++)
+    for (i = 0; i < n; i++)
     {
         v[i] = quitarMenor(&m);
     }
