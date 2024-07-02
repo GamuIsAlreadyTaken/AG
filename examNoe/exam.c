@@ -13,6 +13,7 @@ void ordenar(int v[], int n)
 
 
     while (i < j){ 
+
     	x = v[i];
     	v[i] = v[j];
     	v[j] = x;
@@ -22,7 +23,9 @@ void ordenar(int v[], int n)
 
     };
 
+
     for (i = n - 1; i > 0; i--) 
+
     {
     	x = v[i];
     	j = i + 1;
