@@ -23,7 +23,7 @@ mientras i < j hacer
     j = j - 1
 fin mientras;
 */
-    while (i < j){ 
+    while (i > 0){ 
     	x = v[i];
     	v[i] = v[j];
     	v[j] = x;
@@ -32,6 +32,7 @@ fin mientras;
     	j = j -1;
 
     };
+
 
     for (i = n-1; i < n; i++) //para i = n - 1 hasta 1 paso -1 hacer
     {
