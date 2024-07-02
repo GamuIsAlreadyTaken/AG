@@ -19,8 +19,10 @@ Ordenado:   [  10  9  8  7  6  5  4  3  2  1 ]
 void ordenar(int v[], int n)
 { 
 	int x;
+
     int i = 0;
     int j = n - 1;
+
 
     while (i > 0){ 
     	x = v[i];
