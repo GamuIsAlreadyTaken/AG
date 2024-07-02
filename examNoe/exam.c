@@ -23,7 +23,7 @@ void ordenar(int v[], int n)
     	j = j -1;
 
     };
-    for (i = n-1; i < n; i++) //para i = n - 1 hasta 1 paso -1 hacer
+    for (i = n-1; i < n; i++) //para i = n - 1 hasta 1 paso -1 hacer // Aqui estas yendo de n-1 a n, revisa lo del medio (i < n) deberia ser (i>0) para ir desde n-1 hasta 1
     {
     	x = v[i];
     	j = j + 1;
