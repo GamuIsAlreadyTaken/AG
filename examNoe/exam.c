@@ -13,11 +13,11 @@ void ordenar(int v[], int n)
 	int x;
     int i = 1;
     int j = n;
-
-    while (i < j){ 
-    	x = v[j];
-    	v[i] = v[j];
-    	v[j] = x;
+// si accedes al indice j estas accediendo fuera del array, los indices van de 0 a n-1
+    while (i < j){ // Que estas haciendo aqui?? estas cambiando la posicion i por lo que hay en j (solamente)
+    	x = v[j];	
+    	v[i] = v[j];	// es lo mismo que v[i] = x
+    	v[j] = x;	// es lo mismo que v[j] = v[j], no ha cambiado v[j]
 
     	i = i + 1;
     	j = j -1;
