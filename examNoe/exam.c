@@ -4,25 +4,24 @@
 #include <stdbool.h>
 
 /* Ordenar ascendentemente un vector con el siguiente algoritmo
-procedimiento ordenar (var v[1..n]
-	
+Me da asi los vectores
+	Test ordenado
+Aleatorio:  [ -2 -2  3 -8 -4 -2  7 -9  9 -9 ]
+Ordenado:   [ -2 -2  3 -8 -4 -2  7 -9  9 -1573584821 ]
+
+Ascendente: [  0  1  2  3  4  5  6  7  8  9 ]
+Ordenado:   [  0  1  2  3  4  5  6  7  8 -9 ]
+
+Descendente:    [  10  9  8  7  6  5  4  3  2  1 ]
+Ordenado:   [  10  9  8  7  6  5  4  3  2  1 ]
 */
 
 void ordenar(int v[], int n)
 { 
 	int x;
-    int i = 1;
-    int j = n;
+    int i = 0;
+    int j = n - 1;
 
-/*el pseudocodigo que da
-mientras i < j hacer
-    x:= v[i]
-    v[i] = v[j]
-    v[j] = x
-    i = i + 1
-    j = j - 1
-fin mientras;
-*/
     while (i > 0){ 
     	x = v[i];
     	v[i] = v[j];
@@ -32,7 +31,6 @@ fin mientras;
     	j = j -1;
 
     };
-
 
     for (i = n-1; i < n; i++) //para i = n - 1 hasta 1 paso -1 hacer
     {
@@ -126,6 +124,9 @@ void test_ordenar()
     listar_vector(v, n);
 
     ordenar(v, n);
+
+    printf("Ordenado:\t");
+    listar_vector(v, n);
     
 }
 
