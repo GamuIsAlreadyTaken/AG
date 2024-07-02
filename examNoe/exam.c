@@ -12,7 +12,7 @@ void ordenar(int v[], int n)
 { 
 	int x;
     int i = 1;
-    int j = n;
+    int j = n; // Aqui ten cuidado, n esta fuera del vector, pon n-1, y i deberia empezar en 0 supongo
 
 /*el pseudocodigo que da
 mientras i < j hacer
