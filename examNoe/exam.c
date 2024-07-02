@@ -36,6 +36,76 @@ void ordenar(int v[], int n)
     }
 }
 
+double n_to_1_8(double n)
+{
+    return pow(n, 1.8);
+}
+double n_squared(double n)
+{
+    return n * n;
+}
+double n_to_2_2(double n)
+{
+    return pow(n, 2.2);
+}
+double n_to_1_25(double n)
+{
+    return pow(n, 1.25);
+}
+double n_to_1_2(double n)
+{
+    return pow(n, 1.2);
+}
+double n_to_1_4(double n)
+{
+    return pow(n, 1.4);
+}
+double linear(double n)
+{
+    return n;
+}
+double n_to_0_8(double n)
+{
+    return pow(n, 0.8);
+}
+double nlogn(double n)
+{
+    return n * log(n);
+}
+double nlogn_to_0_8(double n)
+{
+    return pow(n * log(n), 0.8);
+}
+double nlogn_to_1_25(double n)
+{
+    return pow(n * log(n), 1.25);
+}
+
+
+void time_ord_shell_asc()
+{
+    printf("************ ASCENDENTE ************\n");
+    MEASURE_TIME_TABLE(ascendente, ordenar(v, n),
+                       "(n*log n)^0.8", "n*log(n)", "(n*log n)^1.25",
+                       nlogn_to_0_8, nlogn, nlogn_to_1_25);
+}
+
+void time_ord_shell_desc()
+{
+    printf("************ DESCENDENTE ************\n");
+    MEASURE_TIME_TABLE(descendente, ordenar(v, n),
+                       "(n*log n)^0.8", "n*log n", "(n*log n)^1.25",
+                       nlogn_to_0_8, nlogn, nlogn_to_1_25);
+}
+
+void time_ordenar_rand()
+{
+    printf("************ ALEATORIO ************\n");
+    MEASURE_TIME_TABLE(aleatorio, ordenar(v, n),
+                       "n*logn", "n^1.2", "n^1.4",
+                       nlogn, n_to_1_2, n_to_1_4);
+}
+
 void test_ordenar()
 {
     const int n = 10;
@@ -68,7 +138,6 @@ void test_ordenar()
     listar_vector(v, n);
 
     ordenar(v, n);
-
     
 }
 
@@ -79,11 +148,11 @@ int main()
 
     printf("\n");
 
-    printf("ORDENAR\n");
+    /*printf("ORDENAR\n");
     time_ordenar_asc();
     time_ordenar_desc();
     time_ordenar_rand();
 
-    printf("\n");
+    printf("\n");*/
 
 }
