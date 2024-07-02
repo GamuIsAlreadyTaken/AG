@@ -15,7 +15,7 @@ void ordenar(int v[], int n)
     int j = n;
 
     while (i < j){ 
-    	x = v[j];
+    	x = v[i];
     	v[i] = v[j];
     	v[j] = x;
 
@@ -23,10 +23,11 @@ void ordenar(int v[], int n)
     	j = j -1;
 
     };
+
     for (i = n-1; i < n; i++) //para i = n - 1 hasta 1 paso -1 hacer
     {
     	x = v[i];
-    	j = j + 1;
+    	j = i + 1;
 
     	while(j <= n && v[j] < x){ //mientras j <= n y v[j] < x hacer
     		v[j-1] = v[j];
@@ -82,29 +83,6 @@ double nlogn_to_1_25(double n)
 }
 
 
-void time_ord_shell_asc()
-{
-    printf("************ ASCENDENTE ************\n");
-    MEASURE_TIME_TABLE(ascendente, ordenar(v, n),
-                       "(n*log n)^0.8", "n*log(n)", "(n*log n)^1.25",
-                       nlogn_to_0_8, nlogn, nlogn_to_1_25);
-}
-
-void time_ord_shell_desc()
-{
-    printf("************ DESCENDENTE ************\n");
-    MEASURE_TIME_TABLE(descendente, ordenar(v, n),
-                       "(n*log n)^0.8", "n*log n", "(n*log n)^1.25",
-                       nlogn_to_0_8, nlogn, nlogn_to_1_25);
-}
-
-void time_ordenar_rand()
-{
-    printf("************ ALEATORIO ************\n");
-    MEASURE_TIME_TABLE(aleatorio, ordenar(v, n),
-                       "n*logn", "n^1.2", "n^1.4",
-                       nlogn, n_to_1_2, n_to_1_4);
-}
 
 void test_ordenar()
 {
@@ -149,10 +127,23 @@ int main()
     printf("\n");
 
     /*printf("ORDENAR\n");
-    time_ordenar_asc();
-    time_ordenar_desc();
-    time_ordenar_rand();
 
-    printf("\n");*/
+    printf("************ ALEATORIO ************\n");
+    MEASURE_TIME_TABLE(aleatorio, ordenar(v, n),
+                       "n*logn", "n^1.2", "n^1.4",
+                       nlogn, n_to_1_2, n_to_1_4);
+
+    printf("************ ASCENDENTE ************\n");
+    MEASURE_TIME_TABLE(ascendente, ordenar(v, n),
+                       "(n*log n)^0.8", "n*log(n)", "(n*log n)^1.25",
+                       nlogn_to_0_8, nlogn, nlogn_to_1_25);
+
+	printf("************ DESCENDENTE ************\n");
+    MEASURE_TIME_TABLE(descendente, ordenar(v, n),
+                       "(n*log n)^0.8", "n*log n", "(n*log n)^1.25",
+                       nlogn_to_0_8, nlogn, nlogn_to_1_25);
+    */
+
+    printf("\n");
 
 }

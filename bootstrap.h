@@ -5,7 +5,7 @@
 // Cambiar las opciones dependiendo de la practica
 #define EXP_INCREMENT_BASE 2
 #define EXP_INCREMENT_STEPS 7
-#define EXP_INCREMENT_START 500
+#define EXP_INCREMENT_START 16
 #define TRUSTED_TIME 500.0
 
 #define LAST_N (int)(EXP_INCREMENT_START * \
