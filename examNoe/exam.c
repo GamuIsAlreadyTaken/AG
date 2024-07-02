@@ -24,7 +24,7 @@ void ordenar(int v[], int n)
     int j = n - 1;
 
 
-    while (i > 0){ 
+    while (i > 0){ // Esto lo unico que hace es darle la vuelta al vector, y ademas no se esta ejecutando
     	x = v[i];
     	v[i] = v[j];
     	v[j] = x;
@@ -34,7 +34,7 @@ void ordenar(int v[], int n)
 
     };
 
-    for (i = n-1; i < n; i++) //para i = n - 1 hasta 1 paso -1 hacer
+    for (i = n-1; i < n; i++) //para i = n - 1 hasta 1 paso -1 hacer // Sigue sin ser de n-1 a 1, tienes que poner i>0
     {
     	x = v[i];
     	j = i + 1;
