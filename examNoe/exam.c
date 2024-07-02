@@ -8,7 +8,7 @@ procedimiento ordenar (var v[1..n]
 	
 */
 
-void ord_ins(int v[], int n)
+void ordenar(int v[], int n)
 { 
 	int x;
     int i = 1;
@@ -36,37 +36,53 @@ void ord_ins(int v[], int n)
     }
 }
 
-// Algoritmo 1
-void ord_ins(int v[], int n)
-{ // Mejor : linear, Peor : n^2, Medio : n^2
-    int x, j, i;
+void test_ordenar()
+{
+    const int n = 10;
+    int v[10] = {0};
 
-    for (i = 1; i < n; i++)
-    {
-        x = v[i];
-        j = i - 1;
+    printf("Test ordenado\n");
+    aleatorio(v, n); // Test con inicialización aleatoria
 
-        while (j >= 0 && v[j] > x)
-        { // mejor caso const
-            v[j + 1] = v[j];
-            j = j - 1;
-        }
-        v[j + 1] = x;
-    }
+    printf("Aleatorio:\t");
+    listar_vector(v, n);
+
+    ordenar(v, n);
+
+    printf("Ordenado:\t");
+    listar_vector(v, n);
+
+    ascendente(v, n); // Test con inicialización descendente
+
+    printf("\nAscendente:\t");
+    listar_vector(v, n);
+
+    ordenar(v, n);
+
+    printf("Ordenado:\t");
+    listar_vector(v, n);
+
+    descendente(v, n); // Test con inicialización descendente
+
+    printf("\nDescendente:\t");
+    listar_vector(v, n);
+
+    ordenar(v, n);
+
+    
 }
-
 
 int main()
 {
     inicializar_semilla();
-    test_ord();
+    test_ordenar();
 
     printf("\n");
 
     printf("ORDENAR\n");
-    time_ord_ins_rand();
-    time_ord_ins_asc();
-    time_ord_ins_desc();
+    time_ordenar_asc();
+    time_ordenar_desc();
+    time_ordenar_rand();
 
     printf("\n");
 
