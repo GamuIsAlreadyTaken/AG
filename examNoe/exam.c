@@ -14,6 +14,15 @@ void ordenar(int v[], int n)
     int i = 1;
     int j = n;
 
+/*el pseudocodigo que da
+mientras i < j hacer
+    x:= v[i]
+    v[i] = v[j]
+    v[j] = x
+    i = i + 1
+    j = j - 1
+fin mientras;
+*/
     while (i < j){ 
     	x = v[i];
     	v[i] = v[j];
